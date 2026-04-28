@@ -59,18 +59,23 @@
             padding: 0 20px;
         }
         
-        /* LOGO SIZING - ADJUSTED FOR LARGER DISPLAY */
+        /* LOGO SIZING & VISIBILITY FIX */
         .logo-landscape { 
             max-width: 650px; 
             width: 95%; 
             height: auto; 
-            filter: drop-shadow(0px 4px 12px rgba(0,0,0,0.4));
+            /* THIS LINE MAKES BLACK LOGOS TURN WHITE */
+            filter: brightness(0) invert(1);
+            -webkit-filter: brightness(0) invert(1);
         }
 
         .logo-portrait { 
             max-width: 300px; 
             width: 80%;
             height: auto; 
+            /* THIS LINE MAKES BLACK LOGOS TURN WHITE */
+            filter: brightness(0) invert(1);
+            -webkit-filter: brightness(0) invert(1);
         }
 
         .arabic-sub { 
@@ -125,14 +130,12 @@
             margin-top: auto;
         }
 
-        /* RESPONSIVE ADJUSTMENTS */
         @media (max-width: 850px) {
             h1 { font-size: 2rem; }
             .services-grid { grid-template-columns: 1fr; }
             .logo-landscape { max-width: 400px; }
             .logo-portrait { max-width: 220px; }
             .header-wrapper { margin-top: 70px; }
-            .partner-slogan { font-size: 1.3rem; }
         }
     </style>
 </head>
@@ -165,15 +168,15 @@
             <div class="services-grid">
                 <div class="card">
                     <h3>Geological Mapping</h3>
-                    <p>Regional reconnaissance of greenfield terranes, advancing to district- and deposit-scale lithological, structural, and alteration mapping.</p>
+                    <p>Regional reconnaissance of greenfield terranes, advancing to district- and deposit-scale mapping.</p>
                 </div>
                 <div class="card">
                     <h3>Target Generation</h3>
-                    <p>GIS-based multi-sourced data integration to delineate drilling targets and advance projects.</p>
+                    <p>GIS-based multi-sourced data integration to delineate drilling targets.</p>
                 </div>
                 <div class="card">
                     <h3>Project Management</h3>
-                    <p>Supervision of exploration programs, core logging, and rigorous QAQC protocols to ensure data integrity.</p>
+                    <p>Supervision of exploration programs and rigorous QAQC protocols.</p>
                 </div>
             </div>
         </main>
@@ -185,18 +188,14 @@
             <img src="./images/logo_portrait.png" alt="Logo" class="logo-portrait">
             <h2 style="color: var(--accent-blue); margin-top: 20px;">About Us | من نحن</h2>
         </header>
-        
         <div class="about-content">
-            <p style="font-size: 1.3rem; color: var(--accent-blue); font-weight: 600; text-align: center;">Twenty Years of Discovery. A Lifetime of Expertise.</p>
-            <p><strong>Ubuntu GeoScience</strong> is a premier geological consultancy dedicated to precision mineral exploration and integrated geological data transformation.</p>
-            
+            <p><strong>Ubuntu GeoScience</strong> is a premier geological consultancy dedicated to precision mineral exploration.</p>
             <div class="highlight-box">
                 <h3 style="color: var(--accent-blue); margin-top: 0;">Regional Expertise</h3>
-                <p>Our foundation is built on <strong>20 years of dedicated exploration experience</strong> spanning from Western Africa to the <strong>Nubian Shield</strong>.</p>
+                <p>Built on 20 years of dedicated exploration experience spanning the Nubian Shield.</p>
             </div>
         </div>
-
-        <div class="back-btn" onclick="showHome()">← Back to Home / العودة للرئيسية</div>
+        <div class="back-btn" onclick="showHome()">← Back to Home</div>
         <footer>© 2026 Ubuntu GeoScience</footer>
     </div>
 
@@ -205,12 +204,12 @@
             <img src="./images/logo_portrait.png" alt="Logo" class="logo-portrait">
             <h2 style="color: var(--accent-blue); margin-top: 20px;">Our Services | خدماتنا</h2>
         </header>
-        <div style="text-align: center; padding: 0 20px; line-height: 2.5; flex: 1; font-size: 1.1rem;">
-            <p>Mineral Exploration Reconnaissance Survey | أخذ العينات</p>
-            <p>Geological Mapping and Target Generation | الخرائط الجيولوجية وتحديد الأهداف</p>
-            <p>Geochem Survey | المسح الجيوفيزيائي والكيميائي</p>
+        <div style="text-align: center; padding: 40px; flex: 1;">
+            <p>Mineral Exploration Reconnaissance Survey</p>
+            <p>Geological Mapping and Target Generation</p>
+            <p>Geochem Survey</p>
         </div>
-        <div class="back-btn" onclick="showHome()">← Back to Home / العودة للرئيسية</div>
+        <div class="back-btn" onclick="showHome()">← Back to Home</div>
         <footer>© 2026 Ubuntu GeoScience</footer>
     </div>
 
@@ -218,51 +217,26 @@
         <header class="header-wrapper">
             <img src="./images/logo_portrait.png" alt="Logo" class="logo-portrait">
         </header>
-        <div style="text-align: center; margin: auto; padding: 0 20px; flex: 1; display: flex; flex-direction: column; justify-content: center;">
-            <div style="font-size: 1.5rem; margin-bottom: 30px; font-weight: 500; color: #ffffff;">Ubuntu: partnering to move your projects forward.</div>
-            <div class="contact-links" style="display: flex; flex-direction: column; gap: 20px; align-items: center;">
-                <a href="tel:+966535567001" style="color: var(--accent-blue); font-size: 1.3rem; text-decoration: none; font-weight: bold;">
-                    T: +966 53 556 7001
-                </a>
-                <a href="mailto:info@ubuntugeoscience.com" style="color: var(--accent-blue); font-size: 1.3rem; text-decoration: none;">
-                    E: info@ubuntugeoscience.com
-                </a>
-            </div>  
+        <div style="text-align: center; margin: auto; padding: 20px; flex: 1; display: flex; flex-direction: column; justify-content: center;">
+            <a href="tel:+966535567001" style="color: var(--accent-blue); font-size: 1.3rem; text-decoration: none; font-weight: bold; margin-bottom: 10px;">T: +966 53 556 7001</a>
+            <a href="mailto:info@ubuntugeoscience.com" style="color: var(--accent-blue); font-size: 1.3rem; text-decoration: none;">E: info@ubuntugeoscience.com</a>
             <div class="back-btn" onclick="showHome()">← Back to Home</div>
         </div>
         <footer>© 2026 Ubuntu GeoScience</footer>
     </div>
 
     <script>
-        function closeMenu() { 
-            document.getElementById('menu-toggle').checked = false; 
-        }
+        function closeMenu() { document.getElementById('menu-toggle').checked = false; }
         function hideAll() {
             document.getElementById('main-ui').style.display = 'none';
             document.getElementById('services-screen').style.display = 'none';
             document.getElementById('contact-screen').style.display = 'none';
             document.getElementById('about-screen').style.display = 'none';
         }
-        function showHome() { 
-            hideAll(); 
-            document.getElementById('main-ui').style.display = 'flex'; 
-            closeMenu(); 
-        }
-        function showAbout() { 
-            hideAll(); 
-            document.getElementById('about-screen').style.display = 'flex'; 
-            closeMenu(); 
-        }
-        function showServices() { 
-            hideAll(); 
-            document.getElementById('services-screen').style.display = 'flex'; 
-            closeMenu(); 
-        }
-        function showContact() { 
-            hideAll(); 
-            document.getElementById('contact-screen').style.display = 'flex'; 
-            closeMenu(); 
-        }
+        function showHome() { hideAll(); document.getElementById('main-ui').style.display = 'flex'; closeMenu(); }
+        function showAbout() { hideAll(); document.getElementById('about-screen').style.display = 'flex'; closeMenu(); }
+        function showServices() { hideAll(); document.getElementById('services-screen').style.display = 'flex'; closeMenu(); }
+        function showContact() { hideAll(); document.getElementById('contact-screen').style.display = 'flex'; closeMenu(); }
     </script>
 </body>
 </html>
