@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,33 +6,9 @@
     
     <title>Ubuntu GeoScience | Mineral Exploration Saudi Arabia</title>
     <meta name="description" content="Ubuntu GeoScience - Premier geological consultancy specializing in mineral exploration and GIS in Saudi Arabia and beyond.">
-    <meta name="keywords" content="استشارات جيولوجية, التنقيب عن المعادن, جيولوجيا, السعودية, Ubuntu GeoScience, Mineral Exploration Saudi">
-
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ubuntugeoscience.com/">
-    <meta property="og:title" content="Ubuntu GeoScience | Integrated Mineral Exploration">
-    <meta property="og:description" content="20 years of expertise in regional reconnaissance, GIS data integration, and project management across the Nubian Shield and Western Africa.">
-    <meta property="og:image" content="https://ubuntugeoscience.com/logo-preview.png">
-
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://ubuntugeoscience.com/">
-    <meta property="twitter:title" content="Ubuntu GeoScience | Integrated Mineral Exploration">
-    <meta property="twitter:description" content="Premier geological consultancy specializing in mineral exploration and GIS data integration.">
-    <meta property="twitter:image" content="https://ubuntugeoscience.com/logo-preview.png">
-    <head>
-    <meta charset="UTF-8">
-    <title>Ubuntu GeoScience | Mineral Exploration Consultancy</title>
     
-    <meta property="og:title" content="Ubuntu GeoScience | Mineral Exploration">
-    <meta property="og:description" content="Premier geological consultancy applying diverse data integration and synthesis.">
-    <meta property="og:image" content="https://www.ubuntugeoscience.com/logo.png">
-    <meta property="og:url" content="https://www.ubuntugeoscience.com">
-    <meta property="og:type" content="website">
+    <link rel="icon" type="image/png" href="images/logo_portrait.png">
 
-    <style>
-       /* Your CSS stays exactly as it is */
-    </style>
-</head>
     <style>
         :root {
             --bg-deep-navy: #121d2d; 
@@ -79,7 +53,11 @@
             display: flex; flex-direction: column; align-items: center;
             text-align: center; gap: 20px; padding: 0 20px;
         }
-        .logo-graphic { max-width: 160px; height: auto; }
+        
+        /* Specific sizing for the two logo types */
+        .logo-landscape { max-width: 450px; width: 90%; height: auto; }
+        .logo-portrait { max-width: 180px; height: auto; }
+
         .arabic-sub { display: block; font-size: 1.2rem; color: var(--accent-blue); margin-top: 5px; font-weight: bold; }
 
         /* HOME PAGE */
@@ -105,12 +83,6 @@
             justify-content: flex-start;
         }
         
-        .card p {
-            margin-top: 15px;
-            line-height: 1.6;
-            font-size: 0.95rem;
-        }
-
         /* SCREENS */
         #services-screen, #contact-screen, #about-screen {
             display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
@@ -118,18 +90,16 @@
             flex-direction: column; align-items: center; padding-top: 60px;
         }
 
-        /* ABOUT CONTENT STYLING */
         .about-content { max-width: 850px; width: 90%; margin: 20px auto; line-height: 1.8; text-align: left; }
         .highlight-box { background: var(--card-bg); border: 1px solid var(--accent-blue); padding: 25px; border-radius: 8px; margin: 25px 0; }
         
         .back-btn { margin: 40px 0; cursor: pointer; text-decoration: underline; opacity: 0.6; font-size: 1rem; }
         
-        /* FOOTER STYLING */
         footer { 
-            padding: 20px 0; 
+            padding: 30px 0; 
             text-align: center; 
-            font-size: 0.65rem; 
-            opacity: 0.3; 
+            font-size: 0.75rem; 
+            opacity: 0.5; 
             width: 100%; 
             margin-top: auto;
         }
@@ -137,6 +107,7 @@
         @media (max-width: 850px) {
             h1 { font-size: 1.8rem; }
             .services-grid { grid-template-columns: 1fr; }
+            .logo-landscape { max-width: 320px; }
         }
     </style>
 </head>
@@ -155,7 +126,7 @@
 
     <div id="main-ui" style="display: flex; flex-direction: column; min-height: 100vh;">
         <header class="header-wrapper">
-            <img src="logo.png" alt="Ubuntu GeoScience" class="logo-graphic">
+            <img src="images/logo_landscape.png" alt="Ubuntu GeoScience" class="logo-landscape">
             <span class="arabic-sub" dir="rtl">استشارات جيولوجية وادارة مشاريع</span>
             <div class="text-section">
                 <h1>Integrated Approach to Mineral Exploration</h1>
@@ -169,7 +140,7 @@
             <div class="services-grid">
                 <div class="card">
                     <h3>Geological Mapping</h3>
-                    <p>Regional reconnaissance of greenfield terranes, advancing to district- and deposit-scale lithological, structural, and alteration mapping to characterize complex mineral systems.</p>
+                    <p>Regional reconnaissance of greenfield terranes, advancing to district- and deposit-scale lithological, structural, and alteration mapping.</p>
                 </div>
                 <div class="card">
                     <h3>Target Generation</h3>
@@ -181,36 +152,32 @@
                 </div>
             </div>
         </main>
-        <footer>Ubuntu Geoscience-2026</footer>
+        <footer>© 2026 Ubuntu GeoScience</footer>
     </div>
 
     <div id="about-screen">
         <header class="header-wrapper">
-            <img src="logo.png" alt="Logo" class="logo-graphic">
+            <img src="images/logo_portrait.png" alt="Logo" class="logo-portrait">
             <h2 style="color: var(--accent-blue); margin-top: 20px;">About Us | من نحن</h2>
         </header>
         
         <div class="about-content">
             <p style="font-size: 1.2rem; color: var(--accent-blue); font-weight: 600; text-align: center;">Twenty Years of Discovery. A Lifetime of Expertise.</p>
-            
-            <p><strong>Ubuntu GeoScience</strong> is a premier geological consultancy dedicated to precision mineral exploration and integrated geological data transformation. Our brand name reflects our philosophy of professional integrity and collaborative success, acting as a true partner in every discovery.</p>
+            <p><strong>Ubuntu GeoScience</strong> is a premier geological consultancy dedicated to precision mineral exploration and integrated geological data transformation.</p>
             
             <div class="highlight-box">
                 <h3 style="color: var(--accent-blue); margin-top: 0;">Regional Expertise</h3>
-                <p>Our foundation is built on <strong>20 years of dedicated exploration experience</strong> spanning across two of the world's most significant mineral frontiers. From the greenstone belts of <strong>Western Africa</strong> to the high-potential metallogenic provinces of the <strong>Nubian Shield</strong>, our team has successfully navigated diverse <strong>tectonic terranes</strong> and complex <strong>mineral deposit types</strong>.</p>
-                <p>This deep regional knowledge allows us to <strong>delineate</strong> high-potential targets with industry-leading precision, moving projects from early reconnaissance to advanced evaluation phases.</p>
+                <p>Our foundation is built on <strong>20 years of dedicated exploration experience</strong> spanning from Western Africa to the <strong>Nubian Shield</strong>.</p>
             </div>
-
-            <p>Our technical approach is guided by an <strong>in-depth understanding of mineral deposits formation</strong>, allowing us to interpret the "why", the "how" and most of all the "where" behind mineralization. Utilizing <strong>20 years of professional leadership</strong>, we manage the entire exploration lifecycle—integrating high-performance GIS workflows with rigorous field methodology to ensure every project is data-driven and efficiently executed.</p>
         </div>
 
         <div class="back-btn" onclick="showHome()">← Back to Home / العودة للرئيسية</div>
-        <footer>Ubuntu Geoscience-2026</footer>
+        <footer>© 2026 Ubuntu GeoScience</footer>
     </div>
 
     <div id="services-screen">
         <header class="header-wrapper">
-            <img src="logo.png" alt="Logo" class="logo-graphic">
+            <img src="images/logo_portrait.png" alt="Logo" class="logo-portrait">
             <h2 style="color: var(--accent-blue); margin-top: 20px;">Our Services | خدماتنا</h2>
         </header>
         <div style="text-align: center; padding: 0 20px; line-height: 2; flex: 1;">
@@ -219,69 +186,40 @@
             <p>Geochem Survey | المسح الجيوفيزيائي والكيميائي</p>
         </div>
         <div class="back-btn" onclick="showHome()">← Back to Home / العودة للرئيسية</div>
-        <footer>Ubuntu Geoscience-2026</footer>
+        <footer>© 2026 Ubuntu GeoScience</footer>
     </div>
 
     <div id="contact-screen">
         <header class="header-wrapper">
-            <img src="logo.png" alt="Logo" class="logo-graphic">
+            <img src="images/logo_portrait.png" alt="Logo" class="logo-portrait">
         </header>
         <div style="text-align: center; margin: auto; padding: 0 20px; flex: 1; display: flex; flex-direction: column; justify-content: center;">
             <div style="font-size: 1.4rem; margin-bottom: 25px; font-weight: 500; color: #ffffff;">Ubuntu: partnering to move your projects forward.</div>
-         <div class="contact-links" style="display: flex; flex-direction: column; gap: 15px; align-items: center;">
-    <a href="tel:+966535567001" style="color: var(--accent-blue); font-size: 1.2rem; text-decoration: none; font-weight: bold; display: inline-flex; align-items: center;">
-        <span style="width: 25px; text-align: left; display: inline-block;">T:</span>
-        +966 53 556 7001
-    </a>
-
-    <a href="mailto:info@ubuntugeoscience.com" style="color: var(--accent-blue); font-size: 1.2rem; text-decoration: none; display: inline-flex; align-items: center;">
-        <span style="width: 25px; text-align: left; display: inline-block;">E:</span>
-        info@ubuntugeoscience.com
-    </a>
-</div>  
+            <div class="contact-links" style="display: flex; flex-direction: column; gap: 15px; align-items: center;">
+                <a href="tel:+966535567001" style="color: var(--accent-blue); font-size: 1.2rem; text-decoration: none; font-weight: bold;">
+                    T: +966 53 556 7001
+                </a>
+                <a href="mailto:info@ubuntugeoscience.com" style="color: var(--accent-blue); font-size: 1.2rem; text-decoration: none;">
+                    E: info@ubuntugeoscience.com
+                </a>
+            </div>  
             <div class="back-btn" onclick="showHome()">← Back to Home</div>
         </div>
-        <footer>Ubuntu Geoscience--2026</footer>
+        <footer>© 2026 Ubuntu GeoScience</footer>
     </div>
 
     <script>
-        function closeMenu() {
-            document.getElementById('menu-toggle').checked = false;
-        }
-
+        function closeMenu() { document.getElementById('menu-toggle').checked = false; }
         function hideAll() {
             document.getElementById('main-ui').style.display = 'none';
             document.getElementById('services-screen').style.display = 'none';
             document.getElementById('contact-screen').style.display = 'none';
             document.getElementById('about-screen').style.display = 'none';
         }
-
-        function showHome() {
-            hideAll();
-            document.getElementById('main-ui').style.display = 'flex';
-            closeMenu();
-        }
-
-        function showAbout() {
-            hideAll();
-            document.getElementById('about-screen').style.display = 'flex';
-            closeMenu();
-        }
-
-        function showServices() {
-            hideAll();
-            document.getElementById('services-screen').style.display = 'none'; // Ensure main screen layout
-            document.getElementById('services-screen').style.display = 'flex';
-            closeMenu();
-        }
-
-        function showContact() {
-            hideAll();
-            document.getElementById('contact-screen').style.display = 'flex';
-            closeMenu();
-        }
+        function showHome() { hideAll(); document.getElementById('main-ui').style.display = 'flex'; closeMenu(); }
+        function showAbout() { hideAll(); document.getElementById('about-screen').style.display = 'flex'; closeMenu(); }
+        function showServices() { hideAll(); document.getElementById('services-screen').style.display = 'flex'; closeMenu(); }
+        function showContact() { hideAll(); document.getElementById('contact-screen').style.display = 'flex'; closeMenu(); }
     </script>
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"2d3fedfdaab14bcd9a674b3ee84ac6e1","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"2d3fedfdaab14bcd9a674b3ee84ac6e1","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
