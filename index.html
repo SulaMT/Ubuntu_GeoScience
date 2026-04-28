@@ -59,17 +59,16 @@
             padding: 0 20px;
         }
         
-        /* LOGO SIZING MODIFICATIONS */
+        /* LOGO SIZING - ADJUSTED FOR LARGER DISPLAY */
         .logo-landscape { 
-            max-width: 650px; /* Increased from 450px */
+            max-width: 650px; 
             width: 95%; 
             height: auto; 
-            /* Added drop-shadow to help logo pop against dark background */
             filter: drop-shadow(0px 4px 12px rgba(0,0,0,0.4));
         }
 
         .logo-portrait { 
-            max-width: 300px; /* Increased from 180px */
+            max-width: 300px; 
             width: 80%;
             height: auto; 
         }
@@ -83,20 +82,8 @@
         }
 
         /* CONTENT STYLING */
-        h1 { 
-            color: var(--accent-blue); 
-            font-size: 3rem; 
-            margin: 15px 0; 
-            line-height: 1.1; 
-        }
-
-        .partner-slogan { 
-            font-size: 1.6rem; 
-            color: #ffffff; 
-            font-style: italic; 
-            font-weight: 600; 
-        }
-
+        h1 { color: var(--accent-blue); font-size: 3rem; margin: 15px 0; line-height: 1.1; }
+        .partner-slogan { font-size: 1.6rem; color: #ffffff; font-style: italic; font-weight: 600; }
         .container { max-width: 1100px; margin: 0 auto; padding: 20px; flex: 1; }
         
         .services-grid { 
@@ -247,13 +234,35 @@
     </div>
 
     <script>
-        function closeMenu() { document.getElementById('menu-toggle').checked = false; }
+        function closeMenu() { 
+            document.getElementById('menu-toggle').checked = false; 
+        }
         function hideAll() {
             document.getElementById('main-ui').style.display = 'none';
             document.getElementById('services-screen').style.display = 'none';
             document.getElementById('contact-screen').style.display = 'none';
             document.getElementById('about-screen').style.display = 'none';
         }
-        function showHome() { hideAll(); document.getElementById('main-ui').style.display = 'flex'; closeMenu(); }
-        function showAbout() { hideAll(); document.getElementById('about-screen').style.display = 'flex'; closeMenu(); }
-        function showServices() { hideAll();
+        function showHome() { 
+            hideAll(); 
+            document.getElementById('main-ui').style.display = 'flex'; 
+            closeMenu(); 
+        }
+        function showAbout() { 
+            hideAll(); 
+            document.getElementById('about-screen').style.display = 'flex'; 
+            closeMenu(); 
+        }
+        function showServices() { 
+            hideAll(); 
+            document.getElementById('services-screen').style.display = 'flex'; 
+            closeMenu(); 
+        }
+        function showContact() { 
+            hideAll(); 
+            document.getElementById('contact-screen').style.display = 'flex'; 
+            closeMenu(); 
+        }
+    </script>
+</body>
+</html>
