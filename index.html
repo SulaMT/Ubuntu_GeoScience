@@ -49,20 +49,54 @@
 
         /* SHARED HEADER STYLE */
         .header-wrapper {
-            max-width: 1100px; margin: 80px auto 40px auto;
-            display: flex; flex-direction: column; align-items: center;
-            text-align: center; gap: 20px; padding: 0 20px;
+            max-width: 1200px; 
+            margin: 100px auto 40px auto;
+            display: flex; 
+            flex-direction: column; 
+            align-items: center;
+            text-align: center; 
+            gap: 30px; 
+            padding: 0 20px;
         }
         
-        /* Logo Sizing */
-        .logo-landscape { max-width: 450px; width: 90%; height: auto; }
-        .logo-portrait { max-width: 180px; height: auto; }
+        /* LOGO SIZING MODIFICATIONS */
+        .logo-landscape { 
+            max-width: 650px; /* Increased from 450px */
+            width: 95%; 
+            height: auto; 
+            /* Added drop-shadow to help logo pop against dark background */
+            filter: drop-shadow(0px 4px 12px rgba(0,0,0,0.4));
+        }
 
-        .arabic-sub { display: block; font-size: 1.2rem; color: var(--accent-blue); margin-top: 5px; font-weight: bold; }
+        .logo-portrait { 
+            max-width: 300px; /* Increased from 180px */
+            width: 80%;
+            height: auto; 
+        }
+
+        .arabic-sub { 
+            display: block; 
+            font-size: 1.3rem; 
+            color: var(--accent-blue); 
+            margin-top: 5px; 
+            font-weight: bold; 
+        }
 
         /* CONTENT STYLING */
-        h1 { color: var(--accent-blue); font-size: 2.5rem; margin: 10px 0; line-height: 1.1; }
-        .partner-slogan { font-size: 1.5rem; color: #ffffff; font-style: italic; font-weight: 600; }
+        h1 { 
+            color: var(--accent-blue); 
+            font-size: 3rem; 
+            margin: 15px 0; 
+            line-height: 1.1; 
+        }
+
+        .partner-slogan { 
+            font-size: 1.6rem; 
+            color: #ffffff; 
+            font-style: italic; 
+            font-weight: 600; 
+        }
+
         .container { max-width: 1100px; margin: 0 auto; padding: 20px; flex: 1; }
         
         .services-grid { 
@@ -93,7 +127,7 @@
         .about-content { max-width: 850px; width: 90%; margin: 20px auto; line-height: 1.8; text-align: left; }
         .highlight-box { background: var(--card-bg); border: 1px solid var(--accent-blue); padding: 25px; border-radius: 8px; margin: 25px 0; }
         
-        .back-btn { margin: 40px 0; cursor: pointer; text-decoration: underline; opacity: 0.6; font-size: 1rem; }
+        .back-btn { margin: 40px 0; cursor: pointer; text-decoration: underline; opacity: 0.8; font-size: 1.1rem; color: var(--accent-blue); }
         
         footer { 
             padding: 30px 0; 
@@ -104,10 +138,14 @@
             margin-top: auto;
         }
 
+        /* RESPONSIVE ADJUSTMENTS */
         @media (max-width: 850px) {
-            h1 { font-size: 1.8rem; }
+            h1 { font-size: 2rem; }
             .services-grid { grid-template-columns: 1fr; }
-            .logo-landscape { max-width: 320px; }
+            .logo-landscape { max-width: 400px; }
+            .logo-portrait { max-width: 220px; }
+            .header-wrapper { margin-top: 70px; }
+            .partner-slogan { font-size: 1.3rem; }
         }
     </style>
 </head>
@@ -135,7 +173,7 @@
         </header>
 
         <main class="container">
-            <p style="font-size: 1.1rem; line-height: 1.6; text-align: center; margin-bottom: 60px; max-width: 800px; margin-left: auto; margin-right: auto;">At Ubuntu, we leverage years of on-ground exploration experience with modern methods and technology to generate reliable targets.</p>
+            <p style="font-size: 1.2rem; line-height: 1.6; text-align: center; margin-bottom: 60px; max-width: 850px; margin-left: auto; margin-right: auto;">At Ubuntu, we leverage years of on-ground exploration experience with modern methods and technology to generate reliable targets.</p>
 
             <div class="services-grid">
                 <div class="card">
@@ -162,7 +200,7 @@
         </header>
         
         <div class="about-content">
-            <p style="font-size: 1.2rem; color: var(--accent-blue); font-weight: 600; text-align: center;">Twenty Years of Discovery. A Lifetime of Expertise.</p>
+            <p style="font-size: 1.3rem; color: var(--accent-blue); font-weight: 600; text-align: center;">Twenty Years of Discovery. A Lifetime of Expertise.</p>
             <p><strong>Ubuntu GeoScience</strong> is a premier geological consultancy dedicated to precision mineral exploration and integrated geological data transformation.</p>
             
             <div class="highlight-box">
@@ -180,7 +218,7 @@
             <img src="./images/logo_portrait.png" alt="Logo" class="logo-portrait">
             <h2 style="color: var(--accent-blue); margin-top: 20px;">Our Services | خدماتنا</h2>
         </header>
-        <div style="text-align: center; padding: 0 20px; line-height: 2; flex: 1;">
+        <div style="text-align: center; padding: 0 20px; line-height: 2.5; flex: 1; font-size: 1.1rem;">
             <p>Mineral Exploration Reconnaissance Survey | أخذ العينات</p>
             <p>Geological Mapping and Target Generation | الخرائط الجيولوجية وتحديد الأهداف</p>
             <p>Geochem Survey | المسح الجيوفيزيائي والكيميائي</p>
@@ -194,12 +232,12 @@
             <img src="./images/logo_portrait.png" alt="Logo" class="logo-portrait">
         </header>
         <div style="text-align: center; margin: auto; padding: 0 20px; flex: 1; display: flex; flex-direction: column; justify-content: center;">
-            <div style="font-size: 1.4rem; margin-bottom: 25px; font-weight: 500; color: #ffffff;">Ubuntu: partnering to move your projects forward.</div>
-            <div class="contact-links" style="display: flex; flex-direction: column; gap: 15px; align-items: center;">
-                <a href="tel:+966535567001" style="color: var(--accent-blue); font-size: 1.2rem; text-decoration: none; font-weight: bold;">
+            <div style="font-size: 1.5rem; margin-bottom: 30px; font-weight: 500; color: #ffffff;">Ubuntu: partnering to move your projects forward.</div>
+            <div class="contact-links" style="display: flex; flex-direction: column; gap: 20px; align-items: center;">
+                <a href="tel:+966535567001" style="color: var(--accent-blue); font-size: 1.3rem; text-decoration: none; font-weight: bold;">
                     T: +966 53 556 7001
                 </a>
-                <a href="mailto:info@ubuntugeoscience.com" style="color: var(--accent-blue); font-size: 1.2rem; text-decoration: none;">
+                <a href="mailto:info@ubuntugeoscience.com" style="color: var(--accent-blue); font-size: 1.3rem; text-decoration: none;">
                     E: info@ubuntugeoscience.com
                 </a>
             </div>  
@@ -218,8 +256,4 @@
         }
         function showHome() { hideAll(); document.getElementById('main-ui').style.display = 'flex'; closeMenu(); }
         function showAbout() { hideAll(); document.getElementById('about-screen').style.display = 'flex'; closeMenu(); }
-        function showServices() { hideAll(); document.getElementById('services-screen').style.display = 'flex'; closeMenu(); }
-        function showContact() { hideAll(); document.getElementById('contact-screen').style.display = 'flex'; closeMenu(); }
-    </script>
-</body>
-</html>
+        function showServices() { hideAll();
