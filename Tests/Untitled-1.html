@@ -7,7 +7,7 @@
     <title>Ubuntu GeoScience | Mineral Exploration Saudi Arabia</title>
     <meta name="description" content="Ubuntu GeoScience - Premier geological consultancy specializing in mineral exploration and GIS in Saudi Arabia and MENA region.">
     
-    <link rel="icon" type="image/png" href="./images/logo_portrait.png">
+    <link rel="icon" type="image/png" href="images/logo_portrait.png">
 
     <style>
         :root {
@@ -59,18 +59,23 @@
             padding: 0 20px;
         }
         
-        /* LOGO SIZING - ADJUSTED FOR LARGER DISPLAY */
+        /* Removed the filters so your new navy/transparent logos show naturally */
         .logo-landscape { 
-            max-width: 650px; 
-            width: 95%; 
+            max-width: 500px; 
+            width: 90%; 
+   /* Removed the filters so your new navy/transparent logos show naturally */
+        .logo-landscape { 
+            max-width: 500px; 
+            width: 90%; 
             height: auto; 
-            filter: drop-shadow(0px 4px 12px rgba(0,0,0,0.4));
         }
 
         .logo-portrait { 
             max-width: 300px; 
             width: 80%;
             height: auto; 
+            mix-blend-mode: screen;
+            filter: none;
         }
 
         .arabic-sub { 
@@ -104,7 +109,9 @@
             justify-content: flex-start;
         }
         
-        /* SCREENS */
+        /* SCREENS - Home is visible by default, others hidden */
+        #main-ui { display: flex; flex-direction: column; min-height: 100vh; }
+        
         #services-screen, #contact-screen, #about-screen {
             display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             background-color: var(--bg-deep-navy); z-index: 2000; overflow-y: auto;
@@ -125,7 +132,6 @@
             margin-top: auto;
         }
 
-        /* RESPONSIVE ADJUSTMENTS */
         @media (max-width: 850px) {
             h1 { font-size: 2rem; }
             .services-grid { grid-template-columns: 1fr; }
@@ -149,9 +155,9 @@
         </ul>
     </nav>
 
-    <div id="main-ui" style="display: flex; flex-direction: column; min-height: 100vh;">
+    <div id="main-ui">
         <header class="header-wrapper">
-            <img src="./images/logo_landscape.png" alt="Ubuntu GeoScience" class="logo-landscape">
+            <img src="images/logo_landscape.png" alt="Ubuntu GeoScience" class="logo-landscape">
             <span class="arabic-sub" dir="rtl">استشارات جيولوجية وادارة مشاريع</span>
             <div class="text-section">
                 <h1>Integrated Approach to Mineral Exploration</h1>
@@ -182,7 +188,7 @@
 
     <div id="about-screen">
         <header class="header-wrapper">
-            <img src="./images/logo_portrait.png" alt="Logo" class="logo-portrait">
+            <img src="images/logo_portrait.png" alt="Logo" class="logo-portrait">
             <h2 style="color: var(--accent-blue); margin-top: 20px;">About Us | من نحن</h2>
         </header>
         
@@ -202,7 +208,7 @@
 
     <div id="services-screen">
         <header class="header-wrapper">
-            <img src="./images/logo_portrait.png" alt="Logo" class="logo-portrait">
+            <img src="images/logo_portrait.png" alt="Logo" class="logo-portrait">
             <h2 style="color: var(--accent-blue); margin-top: 20px;">Our Services | خدماتنا</h2>
         </header>
         <div style="text-align: center; padding: 0 20px; line-height: 2.5; flex: 1; font-size: 1.1rem;">
@@ -216,7 +222,7 @@
 
     <div id="contact-screen">
         <header class="header-wrapper">
-            <img src="./images/logo_portrait.png" alt="Logo" class="logo-portrait">
+            <img src="images/logo_portrait.png" alt="Logo" class="logo-portrait">
         </header>
         <div style="text-align: center; margin: auto; padding: 0 20px; flex: 1; display: flex; flex-direction: column; justify-content: center;">
             <div style="font-size: 1.5rem; margin-bottom: 30px; font-weight: 500; color: #ffffff;">Ubuntu: partnering to move your projects forward.</div>
@@ -234,35 +240,20 @@
     </div>
 
     <script>
-        function closeMenu() { 
-            document.getElementById('menu-toggle').checked = false; 
-        }
+        function closeMenu() { document.getElementById('menu-toggle').checked = false; }
+        
         function hideAll() {
             document.getElementById('main-ui').style.display = 'none';
             document.getElementById('services-screen').style.display = 'none';
             document.getElementById('contact-screen').style.display = 'none';
             document.getElementById('about-screen').style.display = 'none';
         }
-        function showHome() { 
-            hideAll(); 
-            document.getElementById('main-ui').style.display = 'flex'; 
-            closeMenu(); 
-        }
-        function showAbout() { 
-            hideAll(); 
-            document.getElementById('about-screen').style.display = 'flex'; 
-            closeMenu(); 
-        }
-        function showServices() { 
-            hideAll(); 
-            document.getElementById('services-screen').style.display = 'flex'; 
-            closeMenu(); 
-        }
-        function showContact() { 
-            hideAll(); 
-            document.getElementById('contact-screen').style.display = 'flex'; 
-            closeMenu(); 
-        }
+
+        // Home shows as 'flex' to maintain the vertical layout
+        function showHome() { hideAll(); document.getElementById('main-ui').style.display = 'flex'; closeMenu(); }
+        function showAbout() { hideAll(); document.getElementById('about-screen').style.display = 'flex'; closeMenu(); }
+        function showServices() { hideAll(); document.getElementById('services-screen').style.display = 'flex'; closeMenu(); }
+        function showContact() { hideAll(); document.getElementById('contact-screen').style.display = 'flex'; closeMenu(); }
     </script>
 </body>
 </html>
