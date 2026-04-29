@@ -1,3 +1,7 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
 <body>
 
     {% include nav.html %}
@@ -10,49 +14,19 @@
         <footer>© 2026 Ubuntu GeoScience</footer>
     </div>
 
-    <div id="about-screen">
+    <div id="about-screen" style="display: none;">
         <main class="container">
             {% include about_section.html %}
         </main>
     </div>
 
-    <div id="services-screen">
+    <div id="services-screen" style="display: none;">
         {% include services_section.html %}
     </div>
 
-    <div id="contact-screen">
+    <div id="contact-screen" style="display: none;">
         {% include contact_section.html %}
     </div>
 
-    <script>
-        function closeMenu() { 
-            document.getElementById('menu-toggle').checked = false; 
-        }
-        function hideAll() {
-            document.getElementById('main-ui').style.display = 'none';
-            document.getElementById('services-screen').style.display = 'none';
-            document.getElementById('contact-screen').style.display = 'none';
-            document.getElementById('about-screen').style.display = 'none';
-        }
-        function showHome() { 
-            hideAll(); 
-            document.getElementById('main-ui').style.display = 'flex'; 
-            closeMenu(); 
-        }
-        function showAbout() { 
-            hideAll(); 
-            document.getElementById('about-screen').style.display = 'flex'; 
-            closeMenu(); 
-        }
-        function showServices() { 
-            hideAll(); 
-            document.getElementById('services-screen').style.display = 'flex'; 
-            closeMenu(); 
-        }
-        function showContact() { 
-            hideAll(); 
-            document.getElementById('contact-screen').style.display = 'flex'; 
-            closeMenu(); 
-        }
-    </script>
-</body>  
+    </body>
+</html>
