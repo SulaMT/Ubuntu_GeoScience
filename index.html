@@ -8,36 +8,45 @@
     
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 <body>
 
-    <!-- ================== NAVIGATION ================== -->
-    <nav class="navbar">
+    <!-- ================== NAVIGATION (Essential for Multi-page) ================== -->
+    <header class="navbar">
         <div class="nav-container">
             <div class="logo">
-                <a href="#home">Ubuntu GeoScience</a>
+                <a href="index.html">
+                    <img src="images/logo_portrait.png" alt="Ubuntu GeoScience" class="logo_portrait">
+                </a>
             </div>
 
-            <input type="checkbox" id="nav-toggle" class="nav-toggle">
-            <label for="nav-toggle" class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
+            <nav>
+                <!-- Hamburger Logic Kept Intact -->
+                <input type="checkbox" id="nav-toggle" class="nav-toggle">
+                <label for="nav-toggle" class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
 
-            <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us | من نحن</a></li>
-                <li><a href="#services">Services | الخدمات</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-            </ul>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active-link">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="projects.html">Experience</a></li> 
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-    </nav>
+    </header>
 
-    <!-- ================== HOME SECTION ================== -->
+    <!-- ================== HERO SECTION ================== -->
     <section id="home" class="section">
         <header class="header-wrapper">
-            <img src="images/logo_layout.png" alt="Ubuntu GeoScience" class="logo-landscape">
+            <!-- Retaining your high-res landscape logo and Arabic sub-text -->
+            <img src="images/logo_layout.png" alt="Ubuntu GeoScience" class="logo_layout">
             <span class="arabic-sub" dir="rtl">استشارات جيولوجية وادارة مشاريع</span>
             <div class="text-section">
                 <h1>Integrated Approach to Mineral Exploration</h1>
@@ -47,92 +56,46 @@
 
         <main class="container">
             <p style="font-size: 1.2rem; line-height: 1.8; text-align: center; max-width: 900px; margin: 40px auto;">
-                At Ubuntu, we leverage years of on-ground geological expertise to deliver precision mineral exploration 
-                consulting across the MENA region. Our integrated approach combines detailed geological mapping, 
+                At Ubuntu, we leverage over 15 years of on-ground geological expertise to deliver precision mineral exploration 
+                consulting across the Arabian-Nubian Shield and West Africa. Our integrated approach combines detailed geological mapping, 
                 advanced GIS analysis, and rigorous project management to advance exploration programs efficiently.
             </p>
 
+            <!-- Services Preview (Now linking to the full services.html) -->
             <div class="services-grid">
                 <div class="card">
                     <h3>Geological Mapping</h3>
-                    <p>Regional reconnaissance of greenfield terranes, advancing to district- and deposit-scale lithological, structural, and alteration mapping.</p>
+                    <p>Regional reconnaissance of greenfield terranes, advancing to district- and deposit-scale mapping.</p>
                 </div>
                 <div class="card">
                     <h3>Target Generation</h3>
-                    <p>GIS-based multi-sourced data integration to delineate drilling targets and advance projects.</p>
+                    <p>GIS-based multi-sourced data integration using QGIS and ArcGIS to delineate drilling targets.</p>
                 </div>
                 <div class="card">
                     <h3>Project Management</h3>
-                    <p>Supervision of exploration programs, core logging, and rigorous QAQC protocols to ensure data integrity.</p>
+                    <p>Supervision of exploration programs and core logging to ensure data integrity and QAQC protocols.</p>
                 </div>
             </div>
         </main>
     </section>
 
-    <!-- ================== ABOUT SECTION ================== -->
-    <section id="about" class="section">
-        <div class="container">
-            <header class="section-header">
-                <img src="images/logo_portrait.png" alt="Logo" class="logo-portrait">
-                <h2>About Us | من نحن</h2>
-            </header>
-            
-            <div class="about-content">
-                <p class="highlight">Twenty Years of Discovery. A Lifetime of Expertise.</p>
-                <p><strong>Ubuntu GeoScience</strong> is a premier geological consultancy dedicated to precision mineral exploration and integrated geological data transformation.</p>
-                
-                <div class="highlight-box">
-                    <h3>Regional Expertise</h3>
-                    <p>Our foundation is built on <strong>20 years of dedicated exploration experience</strong> spanning from Western Africa to the Nubian Shield.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ================== SERVICES SECTION ================== -->
-    <section id="services" class="section">
-        <div class="container">
-            <header class="section-header">
-                <img src="images/logo_portrait.png" alt="Logo" class="logo-portrait">
-                <h2>Our Services | خدماتنا</h2>
-            </header>
-            
-            <div class="services-list">
-                <p>• Mineral Exploration Reconnaissance Survey | أخذ العينات</p>
-                <p>• Geological Mapping and Target Generation | الخرائط الجيولوجية وتحديد الأهداف</p>
-                <p>• Geochem Survey | المسح الجيوفيزيائي والكيميائي</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- ================== CONTACT SECTION ================== -->
-    <section id="contact" class="section">
-        <div class="container">
-            <header class="section-header">
-                <img src="images/logo_portrait.png" alt="Logo" class="logo-portrait">
-            </header>
-            
-            <div class="contact-content">
-                <div class="contact-links">
-                    <a href="tel:+966535567001" class="contact-item">
-                        T: +966 53 556 7001
-                    </a>
-                    <a href="mailto:info@ubuntugeoscience.com" class="contact-item">
-                        E: info@ubuntugeoscience.com
-                    </a>
-                </div>
-                <div class="partner-slogan" style="margin-top: 40px;">
-                    Ubuntu: partnering to move your projects forward.
-                </div>
-            </div>
+    <!-- ================== EXPERIENCE TEASER (The Bridge) ================== -->
+    <section class="experience-teaser section">
+        <div class="container" style="text-align: center;">
+            <h2>Proven Discovery Track Record</h2>
+            <p>From the Asmara Belt to the Nubian Shield, Ubuntu GeoScience delivers results grounded in field reality.</p>
+            <a href="projects.html" class="cta-button">View Full Project History</a>
         </div>
     </section>
 
     <!-- ================== FOOTER ================== -->
     <footer>
-        <p>&copy; 2026 Ubuntu GeoScience. All Rights Reserved.</p>
+        <div class="container">
+            <p>&copy; 2026 Ubuntu GeoScience. Field-based and Data-Driven Exploration Approach.</p>
+        </div>
     </footer>
 
+    <!-- Script kept for hamburger menu functionality -->
     <script src="script.js"></script>
 </body>
 </html>

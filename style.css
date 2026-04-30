@@ -1,6 +1,30 @@
-/* =========================================
-   1. POLISHED NAVIGATION (Fixed scattered look)
-   ========================================= */
+:root {
+    --accent-gold: #D4AF37; 
+    --primary-dark: #2c3e50;
+}
+
+/* 1. RESET & LOGO FIX */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.logo_portrait, .logo_landscape {
+    max-width: 200px !important;
+    height: auto;
+    display: block;
+}
+
+.logo_landscape {
+    width: 100%;
+    max-width: 1000px; /* Limits the width so it doesn't stretch too far */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* 2. NAVIGATION BAR */
 .navbar {
     position: fixed;
     top: 0;
@@ -19,88 +43,21 @@
     padding: 10px 20px;
 }
 
-.logo a {
-    font-size: 1.5rem;
-    font-weight: 700;
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px; /* Adds more professional breathing room */
+    margin-right: 20px;
+}
+
+.nav-menu a {
     text-decoration: none;
-    color: #2c3e50;
-    white-space: nowrap;
-}
-
-/* =========================================
-   2. MOBILE OVERHAUL (The "Total Mess" Fix)
-   ========================================= */
-@media (max-width: 768px) {
-    /* Shrink the giant logos */
-    .logo-landscape, .logo-portrait {
-        max-width: 180px !important; /* Forces logo to be smaller on phones */
-        height: auto;
-    }
-
-    /* Fix text overwhelming the screen */
-    h1 {
-        font-size: 1.6rem !important;
-        padding: 0 10px;
-    }
-
-    .arabic-sub {
-        font-size: 1.1rem !important;
-    }
-
-    /* Stack the Navigation properly */
-    .nav-container {
-        flex-direction: row; /* Keeps logo and hamburger on one line */
-        height: 60px;
-    }
-
-    .nav-menu {
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background: white;
-        flex-direction: column;
-        display: none;
-        padding: 20px 0;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-    }
-
-    /* The Hamburger placement */
-    .hamburger {
-        display: flex !important;
-    }
-
-    .nav-toggle:checked ~ .nav-menu {
-        display: flex;
-    }
-}
-
-/* =========================================
-   3. DESKTOP POLISH (Corporate Feel)
-   ========================================= */
-.section {
-    padding: 80px 20px;
-}
-
-.header-wrapper {
-    padding-top: 120px; /* Prevents navbar from covering content */
-    background-color: #f8f9fa;
-}
-
-.partner-slogan {
-    font-style: italic;
-    color: #c0392b;
+    color: var(--primary-dark);
     font-weight: 500;
-    margin-top: 10px;
 }
 
-.card {
-    border-radius: 15px;
-    transition: all 0.3s ease;
-    border: 1px solid #eee;
-}
-
-.card:hover {
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-    border-color: #c0392b;
+/* 3. HERO SECTION BREATHING ROOM */
+.header-wrapper {
+    padding-top: 100px;
+    text-align: center;
 }
