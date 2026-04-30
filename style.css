@@ -1,37 +1,49 @@
 /* =========================================
-   CORE STYLES & VARIABLES
+   CORE STYLES
    ========================================= */
 :root {
-    --primary-color: #2c3e50;    /* Professional Slate */
-    --accent-color: #c0392b;     /* Earthy Red/Clay */
-    --bg-light: #f4f7f6;         /* Changed to a light gray for better readability */
+    --primary-color: #2c3e50;
+    --accent-color: #c0392b;
+    --bg-light: #f4f7f6;
     --text-dark: #2c3e50;
-    --text-light: #ffffff;
     --font-main: 'Inter', sans-serif;
-    --transition: all 0.3s ease;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
 }
 
 body {
     font-family: var(--font-main);
-    line-height: 1.6;
-    color: var(--text-dark);
     background-color: var(--bg-light);
+    color: var(--text-dark);
+    margin: 0;
 }
 
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 20px;
+/* =========================================
+   FIXING THE HEADER & ALIGNMENT
+   ========================================= */
+
+/* This targets the wrapper you have in your HTML */
+.header-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('images/hero-bg.jpg');
+    background-size: cover;
+    min-height: 60vh;
+}
+
+.logo-landscape {
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.arabic-sub {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 20px;
 }
 
 /* =========================================
@@ -41,8 +53,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    /* FIX: Removed the broken color code here */
-    background: rgba(255, 255, 255, 0.95); 
+    background: white;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     z-index: 1000;
 }
@@ -57,73 +68,20 @@ body {
     padding: 0 20px;
 }
 
-.logo a {
-    font-weight: 700;
-    font-size: 1.5rem;
-    color: var(--primary-color);
-    text-decoration: none;
-    letter-spacing: -1px;
-}
-
-.nav-menu {
-    display: flex;
-    list-style: none;
-}
-
-.nav-menu li {
-    margin-left: 30px;
-}
-
-.nav-menu a {
-    text-decoration: none;
-    color: var(--text-dark);
-    font-weight: 500;
-    transition: var(--transition);
-}
-
-.nav-menu a:hover {
-    color: var(--accent-color);
-}
-
 /* =========================================
-   HERO / HOME SECTION
+   SERVICES GRID (As per your HTML)
    ========================================= */
-.section {
-    padding: 100px 0;
-    min-height: 100vh;
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 40px 0;
 }
 
-#home {
-    /* RECOMMENDATION: Ensure path starts with / so GitHub finds it */
-    background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('/images/hero-bg.jpg'); 
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-top: 4px solid var(--primary-color);
 }
-
-.logo-landscape {
-    max-width: 300px;
-    height: auto;
-    margin-bottom: 20px;
-}
-
-.arabic-sub {
-    display: block;
-    font-size: 1.4rem;
-    color: var(--primary-color);
-    margin-bottom: 20px;
-    font-weight: 500;
-}
-
-h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-    color: var(--primary-color);
-}
-
-.partner-slogan {
-    font-size:
