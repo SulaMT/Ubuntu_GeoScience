@@ -1,87 +1,137 @@
 /* =========================================
-   CORE STYLES
+   1. CORE & BACKGROUND FIXED
    ========================================= */
 :root {
-    --primary-color: #2c3e50;
-    --accent-color: #c0392b;
-    --bg-light: #f4f7f6;
-    --text-dark: #2c3e50;
-    --font-main: 'Inter', sans-serif;
+    --primary: #2c3e50;
+    --accent: #c0392b;
+    --light: #f4f7f6;
+    --white: #ffffff;
 }
 
 body {
-    font-family: var(--font-main);
-    background-color: var(--bg-light);
-    color: var(--text-dark);
+    font-family: 'Inter', sans-serif;
     margin: 0;
+    background-color: var(--light); /* This sets the page color */
+    color: var(--primary);
 }
 
-/* =========================================
-   FIXING THE HEADER & ALIGNMENT
-   ========================================= */
-
-/* This targets the wrapper you have in your HTML */
 .header-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 60px 20px;
-    background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('images/hero-bg.jpg');
+    padding: 100px 20px;
+    /* Use a darker gradient if you want the background to pop */
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/hero-bg.jpg');
     background-size: cover;
-    min-height: 60vh;
-}
-
-.logo-landscape {
-    max-width: 300px;
-    height: auto;
-    margin-bottom: 20px;
-}
-
-.arabic-sub {
-    display: block;
-    font-size: 1.4rem;
-    font-weight: 500;
-    margin-bottom: 20px;
+    background-position: center;
+    color: white; /* Makes text readable over dark background */
+    min-height: 70vh;
 }
 
 /* =========================================
-   NAVIGATION
+   2. THE HAMBURGER MENU (Critical)
    ========================================= */
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
-    background: white;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    background: var(--white);
     z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 80px;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 15px 20px;
+}
+
+/* Hide the checkbox */
+.nav-toggle {
+    display: none;
+}
+
+/* The Hamburger Icon */
+.hamburger {
+    display: none; /* Hidden on desktop */
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: var(--primary);
+    transition: 0.3s;
+}
+
+/* Mobile Menu Logic */
+@media (max-width: 768px) {
+    .hamburger { display: flex; }
+    
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        flex-direction: column;
+        display: none; /* Hide menu by default */
+        padding: 20px 0;
+        text-align: center;
+        list-style: none;
+    }
+
+    /* When checkbox is checked, show the menu */
+    .nav-toggle:checked ~ .nav-menu {
+        display: flex;
+    }
+}
+
+/* Desktop Menu */
+.nav-menu {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    color: var(--accent);
 }
 
 /* =========================================
-   SERVICES GRID (As per your HTML)
+   3. PROFESSIONAL CARDS
    ========================================= */
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    padding: 40px 0;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 50px 20px;
 }
 
 .card {
     background: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    border-top: 4px solid var(--primary-color);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    border-bottom: 5px solid var(--accent);
+}
+
+.card:hover {
+    transform: translateY(-10px);
 }
