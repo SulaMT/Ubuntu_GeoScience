@@ -1,43 +1,11 @@
 /* =========================================
-   1. CORE & BACKGROUND FIXED
-   ========================================= */
-:root {
-    --primary: #2c3e50;
-    --accent: #c0392b;
-    --light: #f4f7f6;
-    --white: #ffffff;
-}
-
-body {
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    background-color: var(--light); /* This sets the page color */
-    color: var(--primary);
-}
-
-.header-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 100px 20px;
-    /* Use a darker gradient if you want the background to pop */
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/hero-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    color: white; /* Makes text readable over dark background */
-    min-height: 70vh;
-}
-
-/* =========================================
-   2. THE HAMBURGER MENU (Critical)
+   1. POLISHED NAVIGATION (Fixed scattered look)
    ========================================= */
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
-    background: var(--white);
+    background: #ffffff;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
@@ -48,90 +16,91 @@ body {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 15px 20px;
+    padding: 10px 20px;
 }
 
-/* Hide the checkbox */
-.nav-toggle {
-    display: none;
+.logo a {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: #2c3e50;
+    white-space: nowrap;
 }
 
-/* The Hamburger Icon */
-.hamburger {
-    display: none; /* Hidden on desktop */
-    cursor: pointer;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.hamburger span {
-    width: 25px;
-    height: 3px;
-    background: var(--primary);
-    transition: 0.3s;
-}
-
-/* Mobile Menu Logic */
+/* =========================================
+   2. MOBILE OVERHAUL (The "Total Mess" Fix)
+   ========================================= */
 @media (max-width: 768px) {
-    .hamburger { display: flex; }
-    
-    .nav-menu {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: var(--white);
-        flex-direction: column;
-        display: none; /* Hide menu by default */
-        padding: 20px 0;
-        text-align: center;
-        list-style: none;
+    /* Shrink the giant logos */
+    .logo-landscape, .logo-portrait {
+        max-width: 180px !important; /* Forces logo to be smaller on phones */
+        height: auto;
     }
 
-    /* When checkbox is checked, show the menu */
+    /* Fix text overwhelming the screen */
+    h1 {
+        font-size: 1.6rem !important;
+        padding: 0 10px;
+    }
+
+    .arabic-sub {
+        font-size: 1.1rem !important;
+    }
+
+    /* Stack the Navigation properly */
+    .nav-container {
+        flex-direction: row; /* Keeps logo and hamburger on one line */
+        height: 60px;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        display: none;
+        padding: 20px 0;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+
+    /* The Hamburger placement */
+    .hamburger {
+        display: flex !important;
+    }
+
     .nav-toggle:checked ~ .nav-menu {
         display: flex;
     }
 }
 
-/* Desktop Menu */
-.nav-menu {
-    display: flex;
-    gap: 20px;
-    list-style: none;
-    margin: 0;
-}
-
-.nav-menu a {
-    text-decoration: none;
-    color: var(--primary);
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-.nav-menu a:hover {
-    color: var(--accent);
-}
-
 /* =========================================
-   3. PROFESSIONAL CARDS
+   3. DESKTOP POLISH (Corporate Feel)
    ========================================= */
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    padding: 50px 20px;
+.section {
+    padding: 80px 20px;
+}
+
+.header-wrapper {
+    padding-top: 120px; /* Prevents navbar from covering content */
+    background-color: #f8f9fa;
+}
+
+.partner-slogan {
+    font-style: italic;
+    color: #c0392b;
+    font-weight: 500;
+    margin-top: 10px;
 }
 
 .card {
-    background: white;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease;
-    border-bottom: 5px solid var(--accent);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
 }
 
 .card:hover {
-    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    border-color: #c0392b;
 }
