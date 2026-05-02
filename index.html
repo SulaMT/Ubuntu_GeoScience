@@ -8,12 +8,10 @@
     
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<!-- Favicon -->
-<link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 <body>
 
-    <!-- ================== NAVIGATION (Essential for Multi-page) ================== -->
     <header class="navbar">
         <div class="nav-container">
             <div class="logo">
@@ -23,12 +21,9 @@
             </div>
 
             <nav>
-                <!-- Hamburger Logic Kept Intact -->
                 <input type="checkbox" id="nav-toggle" class="nav-toggle">
                 <label for="nav-toggle" class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <span></span><span></span><span></span>
                 </label>
 
                 <ul class="nav-menu">
@@ -42,45 +37,63 @@
         </div>
     </header>
 
-   <!-- ================== HERO SECTION ================== -->
+    <!-- HERO SECTION -->
     <section id="home" class="section">
         <header class="header-wrapper">
-            <!-- The banner already contains your Arabic text, so we keep it simple -->
-            <img src="images/logo_layout.png" alt="Ubuntu GeoScience - Mineral Exploration Consulting" class="logo_layout">
-            
+            <img src="images/logo_layout.png" alt="Ubuntu GeoScience" class="logo_layout">
             <div class="text-section">
                 <h1>Integrated Approach to Mineral Exploration</h1>
                 <p class="partner-slogan">Partnering to Move Your Projects Forward.</p>
             </div>
         </header>
     </section>
-    
-        <main class="container">
-            <p style="font-size: 1.2rem; line-height: 1.8; text-align: center; max-width: 900px; margin: 40px auto;">
-                At Ubuntu, we leverage over 15 years of on-ground geological expertise to deliver precision mineral exploration 
-                consulting across the Arabian-Nubian Shield and West Africa. Our integrated approach combines detailed geological mapping, 
-                advanced GIS analysis, and rigorous project management to advance exploration programs efficiently.
-            </p>
 
-            <!-- Services Preview (Now linking to the full services.html) -->
-            <div class="services-grid">
-                <div class="card">
-                    <h3>Geological Mapping</h3>
-                    <p>Regional reconnaissance of greenfield terranes, advancing to district- and deposit-scale mapping.</p>
-                </div>
-                <div class="card">
-                    <h3>Target Generation</h3>
-                    <p>GIS-based multi-sourced data integration using QGIS and ArcGIS to delineate drilling targets.</p>
-                </div>
-                <div class="card">
-                    <h3>Project Management</h3>
-                    <p>Supervision of exploration programs and core logging to ensure data integrity and QAQC protocols.</p>
+    <!-- INSERTED ABOUT SECTION WITH SCROLLING WHITE BOXES -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Ubuntu GeoScience</h2>
+            <div class="about-scroll-container">
+                <div class="about-grid">
+                    <div class="about-box">
+                        <h3>Professional Expertise</h3>
+                        <p>Founded by Mussie M., an exploration geologist with over 15 years of hands-on experience in mineral exploration and project leadership across East and West Africa.</p>
+                    </div>
+                    <div class="about-box">
+                        <h3>Our Philosophy</h3>
+                        <p>Guided by the Ubuntu philosophy and a field-based, data-driven approach, we believe real discovery comes from the interconnection between field observations and integrated data.</p>
+                    </div>
+                    <div class="about-box">
+                        <h3>Technical Leadership</h3>
+                        <p>We serve as your technical bridge in the Arabian-Nubian Shield, delivering field-grounded expertise that turns prospects into discoveries.</p>
+                    </div>
+                    <div class="about-box">
+                        <h3>Project Success</h3>
+                        <p>From the Asmara Belt to the Nubian Shield, we advance projects toward development through rigorous GIS analysis and project management.</p>
+                    </div>
                 </div>
             </div>
-        </main>
+        </div>
     </section>
 
-    <!-- ================== EXPERIENCE TEASER (The Bridge) ================== -->
+    <!-- MAIN SERVICES PREVIEW -->
+    <main class="container">
+        <div class="services-grid">
+            <div class="card">
+                <h3>Geological Mapping</h3>
+                <p>Regional reconnaissance of greenfield terranes, advancing to district- and deposit-scale mapping.</p>
+            </div>
+            <div class="card">
+                <h3>Target Generation</h3>
+                <p>GIS-based multi-sourced data integration using QGIS and ArcGIS to delineate drilling targets.</p>
+            </div>
+            <div class="card">
+                <h3>Project Management</h3>
+                <p>Supervision of exploration programs and core logging to ensure data integrity and QAQC protocols.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- EXPERIENCE TEASER -->
     <section class="experience-teaser section">
         <div class="container" style="text-align: center;">
             <h2>Proven Discovery Track Record</h2>
@@ -89,14 +102,12 @@
         </div>
     </section>
 
-    <!-- ================== FOOTER ================== -->
     <footer>
         <div class="container">
             <p>&copy; 2026 Ubuntu GeoScience. Field-based and Data-Driven Exploration Approach.</p>
         </div>
     </footer>
 
-    <!-- Script kept for hamburger menu functionality -->
     <script src="script.js"></script>
 </body>
 </html>
