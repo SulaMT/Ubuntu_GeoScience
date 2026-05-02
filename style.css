@@ -122,3 +122,48 @@ body {
         overflow-x: hidden;
     }
 }
+
+/* Add this to your CSS */
+section {
+    /* This creates space at the top of every section equal to your navbar height */
+    scroll-margin-top: var(--navbar-height); 
+    
+    /* If you aren't using anchor links but the section is just 'under' the header on load: */
+    padding-top: 40px; 
+    padding-bottom: 40px;
+}
+
+/* Specific fix for the first section after the header if it's still overlapping */
+#about {
+    margin-top: 20px; 
+}
+
+/* 1. Fix the Contact Section Background */
+#contact {
+    background-color: #0d1b2a; /* Matches the dark theme in your screenshots */
+    color: #ffffff; /* Ensures text is readable on the dark background */
+    padding: 80px 20px;
+    text-align: center;
+}
+
+/* 2. Constrain the massive logo in the contact section */
+#contact img {
+    max-height: 150px; /* Prevents the logo from pushing info off-screen */
+    width: auto;
+    display: block;
+    margin: 0 auto 30px auto;
+    filter: brightness(0) invert(1); /* Optional: turns a dark logo white for the dark BG */
+}
+
+/* 3. Style the contact info for clarity */
+.contact-info {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-info a {
+    color: var(--accent-gold);
+    text-decoration: none;
+    font-weight: bold;
+}
