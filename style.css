@@ -90,7 +90,7 @@ body {
 
 .logo_layout {
     width: 100%;
-    max-width: 600px;
+    max-width: 1200px;
     height: auto;
     margin-bottom: 30px;
 }
@@ -351,8 +351,12 @@ footer {
     .about-box {
         flex: 1 1 100%;
     }
-}
 
+    /* Add this line – no new @media, just the rule */
+    .logo_layout {
+        max-width: 90%;
+    }
+}
 /* Hamburger menu icon */
 .hamburger {
     display: none;
@@ -394,4 +398,22 @@ footer {
     .nav-toggle {
         display: none;
     }
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;  /* full viewport height */
+}
+
+main, .section, .container, .experience-teaser {
+    flex: 1;  /* pushes footer down */
+}
+
+footer {
+    margin-top: auto;   /* forces footer to bottom */
+    padding: 20px;      /* slightly reduced */
+    text-align: center;
+    color: #8892b0;
+    font-size: 0.75rem; /* smaller than before */
 }
