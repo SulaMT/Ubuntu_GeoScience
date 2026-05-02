@@ -1,10 +1,14 @@
+/* ==========================================================================
+   1. GLOBAL STYLES & VARIABLES (REVERTED TO DARK THEME)
+   ========================================================================== */
 :root {
-    --accent-gold: #D4AF37;
-    --primary-dark: #2c3e50;
-    --navbar-height: 70px; /* Adjust based on your actual navbar height */
+    --accent-cyan: #00d4ff;       /* Matches the cyan in your original screenshot */
+    --bg-dark: #0a192f;           /* Deep navy background from original style */
+    --bg-card: #112240;           /* Slightly lighter navy for cards */
+    --text-main: #ccd6f6;         /* Light silver/blue text for readability */
+    --navbar-height: 80px;
 }
 
-/* 1. RESET & LOGO FIX */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -12,35 +16,26 @@
 }
 
 body {
-    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-    line-height: 1.5;
-    color: var(--primary-dark);
-    scroll-padding-top: var(--navbar-height); /* Prevents anchor links from hiding behind navbar */
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    color: var(--text-main);
+    background-color: var(--bg-dark); /* Reverted to Dark Mode */
+    scroll-padding-top: var(--navbar-height);
+    overflow-x: hidden;
 }
 
-.logo_portrait, .logo_landscape {
-    max-width: 200px !important;
-    height: auto;
-    display: block;
-}
-
-.logo_landscape {
-    width: 100%;
-    max-width: 1000px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-/* 2. NAVIGATION BAR */
+/* ==========================================================================
+   2. NAVIGATION BAR (DARK STYLE)
+   ========================================================================== */
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background: #ffffff;
+    background: rgba(10, 25, 47, 0.95); /* Semi-transparent navy */
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
+    backdrop-filter: blur(10px);
 }
 
 .nav-container {
@@ -49,77 +44,153 @@ body {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 10px 20px;
-    min-height: var(--navbar-height);
+    padding: 0 20px;
+    height: var(--navbar-height);
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.logo_portrait {
+    max-height: 50px;
+    width: auto;
+    display: block;
+    filter: brightness(0) invert(1); /* Makes logo white if it was dark */
 }
 
 .nav-menu {
     display: flex;
     list-style: none;
     gap: 30px;
-    margin-right: 20px;
 }
 
 .nav-menu a {
     text-decoration: none;
-    color: var(--primary-dark);
+    color: #8892b0;
     font-weight: 500;
-    transition: color 0.2s ease;
+    transition: color 0.3s ease;
 }
 
-.nav-menu a:hover {
-    color: var(--accent-gold);
+.nav-menu a:hover, 
+.nav-menu a.active-link {
+    color: var(--accent-cyan);
 }
 
-/* 3. HERO SECTION – FIXED SPACING */
+/* ==========================================================================
+   3. HERO SECTION (ALIGNED WITH ORIGINAL DESIGN)
+   ========================================================================== */
 .header-wrapper {
-    /* Ensure content starts below the fixed navbar */
-    padding-top: calc(var(--navbar-height) + 20px);
+    padding-top: calc(var(--navbar-height) + 60px);
+    padding-bottom: 60px;
     text-align: center;
 }
 
-/* Optional: if you have a main container or sections after hero */
-.main-content, section {
-    max-width: 1200px;
+.logo_layout {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+.text-section h1 {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.partner-slogan {
+    font-size: 1.4rem;
+    color: var(--accent-cyan); /* Cyan accent for the slogan */
+    font-weight: 600;
+    font-style: italic;
+}
+
+/* ==========================================================================
+   4. CONTENT GRID (DARK CARDS)
+   ========================================================================== */
+.container {
+    max-width: 1100px;
     margin: 0 auto;
     padding: 40px 20px;
 }
 
-/* 4. RESPONSIVE FIXES (for mobile – text hidden or squished) */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 50px;
+}
+
+.card {
+    background: var(--bg-card);
+    padding: 35px;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 212, 255, 0.1);
+    box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent-cyan);
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    color: white;
+}
+
+.card p {
+    color: #8892b0;
+}
+
+/* ==========================================================================
+   5. CTA & FOOTER
+   ========================================================================== */
+.experience-teaser {
+    background-color: #112240;
+    padding: 80px 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    border: 1px solid var(--accent-cyan);
+    color: var(--accent-cyan);
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    margin-top: 30px;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background: rgba(0, 212, 255, 0.1);
+}
+
+footer {
+    padding: 40px 20px;
+    text-align: center;
+    color: #8892b0;
+    font-size: 0.85rem;
+}
+
+/* ==========================================================================
+   6. RESPONSIVE DESIGN
+   ========================================================================== */
 @media (max-width: 768px) {
-    :root {
-        --navbar-height: 60px; /* Smaller navbar on mobile */
-    }
-
-    .nav-container {
-        flex-direction: column;
-        gap: 10px;
-        padding: 10px 15px;
-    }
-
     .nav-menu {
-        gap: 20px;
-        margin-right: 0;
-        flex-wrap: wrap;
-        justify-content: center;
+        display: none; 
+        background: var(--bg-card);
+    }
+    
+    .nav-toggle:checked ~ .nav-menu {
+        display: flex;
     }
 
-    .header-wrapper {
-        padding-top: calc(var(--navbar-height) + 30px);
-    }
-
-    .logo_landscape {
-        max-width: 90%;
-    }
-
-    .logo_portrait {
-        max-width: 150px !important;
-    }
-
-    /* Prevent text from overflowing */
-    body {
-        word-wrap: break-word;
-        overflow-x: hidden;
+    .text-section h1 {
+        font-size: 2rem;
     }
 }
 

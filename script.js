@@ -1,24 +1,31 @@
-const hamburger = document.getElementById('hamburger');
-const navLinks = document.querySelector('.nav-links');
+/* ==========================================================================
+   NAVBAR MOBILE TOGGLE
+   ========================================================================== */
+const navToggle = document.getElementById('nav-toggle');
+const navMenu = document.querySelector('.nav-menu');
+const navLinks = document.querySelectorAll('.nav-menu a');
 
-if (hamburger) {
-    hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
+// Close the mobile menu automatically when a link is clicked
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        if (navToggle) navToggle.checked = false;
     });
-}
+});
 
-// Dynamically adjust hero section to avoid fixed navbar overlap
+/* ==========================================================================
+   DYNAMIC PADDING ADJUSTMENT
+   ========================================================================== */
 function adjustHeroPadding() {
     const navbar = document.querySelector('.navbar');
-    const heroSection = document.querySelector('#home');
+    // Updated selector to match your header-wrapper in the new CSS
+    const headerWrapper = document.querySelector('.header-wrapper');
     
-    if (navbar && heroSection) {
+    if (navbar && headerWrapper) {
         const navbarHeight = navbar.offsetHeight;
-        // Add 20px extra breathing room
-        heroSection.style.paddingTop = (navbarHeight + 20) + 'px';
+        headerWrapper.style.paddingTop = (navbarHeight + 20) + 'px';
     }
 }
 
-// Run on page load and on window resize
+// Run on load and resize to keep layout sharp on MacBook and Mobile
 window.addEventListener('load', adjustHeroPadding);
 window.addEventListener('resize', adjustHeroPadding);
