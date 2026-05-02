@@ -431,7 +431,11 @@ footer {
 
 /* Contact Page Logo - Smaller */
 .logo_portrait_contact {
-    max-width: 220px;
+    
+   /* Replace or update the existing .logo_portrait_contact rule */
+.logo_portrait_contact {
+    max-width: 220px;        /* desired max size */
+    width: 100%;             /* allows scaling down */
     height: auto;
     display: block;
     margin: 0 auto 35px;
