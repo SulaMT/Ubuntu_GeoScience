@@ -1,6 +1,7 @@
 :root {
-    --accent-gold: #D4AF37; 
+    --accent-gold: #D4AF37;
     --primary-dark: #2c3e50;
+    --navbar-height: 70px; /* Adjust based on your actual navbar height */
 }
 
 /* 1. RESET & LOGO FIX */
@@ -8,6 +9,13 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.5;
+    color: var(--primary-dark);
+    scroll-padding-top: var(--navbar-height); /* Prevents anchor links from hiding behind navbar */
 }
 
 .logo_portrait, .logo_landscape {
@@ -18,7 +26,7 @@
 
 .logo_landscape {
     width: 100%;
-    max-width: 1000px; /* Limits the width so it doesn't stretch too far */
+    max-width: 1000px;
     height: auto;
     display: block;
     margin: 0 auto;
@@ -28,6 +36,7 @@
 .navbar {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     background: #ffffff;
     z-index: 1000;
@@ -41,12 +50,13 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 10px 20px;
+    min-height: var(--navbar-height);
 }
 
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 30px; /* Adds more professional breathing room */
+    gap: 30px;
     margin-right: 20px;
 }
 
@@ -54,10 +64,61 @@
     text-decoration: none;
     color: var(--primary-dark);
     font-weight: 500;
+    transition: color 0.2s ease;
 }
 
-/* 3. HERO SECTION BREATHING ROOM */
+.nav-menu a:hover {
+    color: var(--accent-gold);
+}
+
+/* 3. HERO SECTION – FIXED SPACING */
 .header-wrapper {
-    padding-top: 100px;
+    /* Ensure content starts below the fixed navbar */
+    padding-top: calc(var(--navbar-height) + 20px);
     text-align: center;
+}
+
+/* Optional: if you have a main container or sections after hero */
+.main-content, section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* 4. RESPONSIVE FIXES (for mobile – text hidden or squished) */
+@media (max-width: 768px) {
+    :root {
+        --navbar-height: 60px; /* Smaller navbar on mobile */
+    }
+
+    .nav-container {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 15px;
+    }
+
+    .nav-menu {
+        gap: 20px;
+        margin-right: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .header-wrapper {
+        padding-top: calc(var(--navbar-height) + 30px);
+    }
+
+    .logo_landscape {
+        max-width: 90%;
+    }
+
+    .logo_portrait {
+        max-width: 150px !important;
+    }
+
+    /* Prevent text from overflowing */
+    body {
+        word-wrap: break-word;
+        overflow-x: hidden;
+    }
 }
