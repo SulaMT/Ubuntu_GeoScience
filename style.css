@@ -58,7 +58,7 @@ body {
     max-height: 50px;
     width: auto;
     display: block;
-    filter: brightness(0) invert(1);
+    filter: brightness(0) invert(1);  /* REMOVE or comment out */
 }
 
 .nav-menu {
@@ -259,7 +259,7 @@ footer {
 .logo_portrait_contact {
     max-width: 180px;
     height: auto;
-    filter: brightness(0) invert(1);
+    filter: brightness(0) invert(1);  /*REMOVE or comment out */
 }
 
 .contact-details-center {
