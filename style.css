@@ -1,13 +1,12 @@
 /* ==========================================================================
-   1. GLOBAL STYLES & VARIABLES
+   1. GLOBAL STYLES & VARIABLES (REVERTED TO DARK THEME)
    ========================================================================== */
 :root {
-    --accent-gold: #D4AF37;
-    --primary-dark: #2c3e50;
+    --accent-cyan: #00d4ff;       /* Matches the cyan in your original screenshot */
+    --bg-dark: #0a192f;           /* Deep navy background from original style */
+    --bg-card: #112240;           /* Slightly lighter navy for cards */
+    --text-main: #ccd6f6;         /* Light silver/blue text for readability */
     --navbar-height: 80px;
-    --text-main: #333333;
-    --bg-light: #ffffff;
-    --bg-alt: #f9f9f9;
 }
 
 * {
@@ -17,26 +16,26 @@
 }
 
 body {
-    /* Updated to use Inter as primary font */
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     line-height: 1.6;
     color: var(--text-main);
-    background-color: var(--bg-light);
+    background-color: var(--bg-dark); /* Reverted to Dark Mode */
     scroll-padding-top: var(--navbar-height);
     overflow-x: hidden;
 }
 
 /* ==========================================================================
-   2. NAVIGATION BAR
+   2. NAVIGATION BAR (DARK STYLE)
    ========================================================================== */
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background: var(--bg-light);
+    background: rgba(10, 25, 47, 0.95); /* Semi-transparent navy */
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
+    backdrop-filter: blur(10px);
 }
 
 .nav-container {
@@ -49,15 +48,15 @@ body {
     height: var(--navbar-height);
 }
 
-/* FIX: Hide the checkbox used for the hamburger menu */
 .nav-toggle {
     display: none;
 }
 
 .logo_portrait {
-    max-height: 60px; /* Ensures logo fits within navbar height */
+    max-height: 50px;
     width: auto;
     display: block;
+    filter: brightness(0) invert(1); /* Makes logo white if it was dark */
 }
 
 .nav-menu {
@@ -68,48 +67,47 @@ body {
 
 .nav-menu a {
     text-decoration: none;
-    color: var(--primary-dark);
+    color: #8892b0;
     font-weight: 500;
-    font-size: 0.95rem;
     transition: color 0.3s ease;
 }
 
 .nav-menu a:hover, 
 .nav-menu a.active-link {
-    color: var(--accent-gold);
+    color: var(--accent-cyan);
 }
 
 /* ==========================================================================
-   3. HERO & HEADER SECTION
+   3. HERO SECTION (ALIGNED WITH ORIGINAL DESIGN)
    ========================================================================== */
 .header-wrapper {
-    padding-top: calc(var(--navbar-height) + 40px);
-    padding-bottom: 40px;
+    padding-top: calc(var(--navbar-height) + 60px);
+    padding-bottom: 60px;
     text-align: center;
-    background-color: var(--bg-light);
 }
 
 .logo_layout {
     width: 100%;
-    max-width: 800px;
+    max-width: 600px;
     height: auto;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .text-section h1 {
-    font-size: 2.5rem;
-    color: var(--primary-dark);
-    margin-bottom: 10px;
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 15px;
 }
 
 .partner-slogan {
-    font-size: 1.25rem;
-    color: var(--accent-gold);
+    font-size: 1.4rem;
+    color: var(--accent-cyan); /* Cyan accent for the slogan */
     font-weight: 600;
+    font-style: italic;
 }
 
 /* ==========================================================================
-   4. CONTENT BOXES & GRID
+   4. CONTENT GRID (DARK CARDS)
    ========================================================================== */
 .container {
     max-width: 1100px;
@@ -117,98 +115,81 @@ body {
     padding: 40px 20px;
 }
 
-/* FIX: Restoring the services grid from the HTML structure */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    gap: 25px;
     margin-top: 50px;
 }
 
 .card {
-    background: var(--bg-alt);
-    padding: 30px;
+    background: var(--bg-card);
+    padding: 35px;
     border-radius: 4px;
-    border-top: 4px solid var(--accent-gold);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease;
+    border: 1px solid rgba(0, 212, 255, 0.1);
+    box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
+    transition: all 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
+    border-color: var(--accent-cyan);
 }
 
 .card h3 {
     margin-bottom: 15px;
-    color: var(--primary-dark);
+    color: white;
+}
+
+.card p {
+    color: #8892b0;
 }
 
 /* ==========================================================================
    5. CTA & FOOTER
    ========================================================================== */
 .experience-teaser {
-    background-color: var(--primary-dark);
-    color: white;
-    padding: 60px 20px;
+    background-color: #112240;
+    padding: 80px 20px;
 }
 
 .cta-button {
     display: inline-block;
-    background-color: var(--accent-gold);
-    color: white;
-    padding: 12px 30px;
+    border: 1px solid var(--accent-cyan);
+    color: var(--accent-cyan);
+    padding: 15px 30px;
     text-decoration: none;
     border-radius: 4px;
     font-weight: 600;
-    margin-top: 20px;
-    transition: background 0.3s ease;
+    margin-top: 30px;
+    transition: all 0.3s ease;
 }
 
 .cta-button:hover {
-    background-color: #b8952d;
+    background: rgba(0, 212, 255, 0.1);
 }
 
 footer {
-    background: #1a252f;
-    color: #bdc3c7;
-    padding: 30px 20px;
+    padding: 40px 20px;
     text-align: center;
-    font-size: 0.9rem;
+    color: #8892b0;
+    font-size: 0.85rem;
 }
 
 /* ==========================================================================
    6. RESPONSIVE DESIGN
    ========================================================================== */
 @media (max-width: 768px) {
-    :root {
-        --navbar-height: 70px;
-    }
-
-    /* Logic for mobile menu visibility if using script.js */
-    .hamburger {
-        display: block;
-        cursor: pointer;
-    }
-
     .nav-menu {
-        /* This hides the menu by default on mobile unless toggled */
         display: none; 
-        flex-direction: column;
-        position: absolute;
-        top: var(--navbar-height);
-        left: 0;
-        width: 100%;
-        background: white;
-        padding: 20px;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        background: var(--bg-card);
     }
-
-    /* When checkbox is checked, show menu */
+    
     .nav-toggle:checked ~ .nav-menu {
         display: flex;
     }
 
     .text-section h1 {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 }
