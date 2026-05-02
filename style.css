@@ -252,14 +252,15 @@ footer {
     padding: 40px 20px;
 }
 
-.contact-logo {
+..contact-logo {
     margin-bottom: 40px;
 }
 
 .logo_portrait_contact {
-    max-width: 180px;
+    max-width: 180px;     /* or 220px */
     height: auto;
-    filter: brightness(0) invert(1);  /*REMOVE or comment out */
+    /* Remove or comment out this line */
+    /* filter: brightness(0) invert(1); */
 }
 
 .contact-details-center {
