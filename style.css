@@ -54,12 +54,21 @@ body {
     display: none;
 }
 
-.logo_portrait {
-    max-height: 50px;
-    width: auto;
+.logo_portrait_contact {
+    width: auto;             /* Let the width scale proportionally */
+    max-width: 100%;         /* Don't let it overflow the container */
+    max-height: 180px;       /* CRITICAL: Prevents vertical takeover on desktop */
     display: block;
-    filter: brightness(0) invert(1);  /* REMOVE or comment out */
+    margin: 0 auto 20px;
+    filter: brightness(1.1); /* Optional: makes the white pop against the dark bg */
 }
+
+@media (max-width: 768px) {
+    .logo_portrait_contact {
+        max-height: 120px;   /* Smaller height for mobile phones */
+    }
+}
+
 
 .nav-menu {
     display: flex;
