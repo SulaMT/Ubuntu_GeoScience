@@ -70,6 +70,7 @@ footer {
     max-width: 180px;
     width: auto;
     display: block;
+    object-fit: contain; /* Added to prevent logo stretching */
 }
 
 .nav-menu {
@@ -117,7 +118,7 @@ footer {
 }
 
 #home.section {
-    padding-top: 0;
+    padding-top: 40px; /* Adjusted to ensure hero buffer from navbar */
 }
 
 section, .section, [id] {
@@ -458,5 +459,3 @@ footer p {
     font-size: 0.7rem;      /* smaller */
     opacity: 0.6;           /* faint */
 }
-
-/* Ensure contact form (if any) is centered – already done */
