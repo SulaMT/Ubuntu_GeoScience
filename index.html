@@ -34,17 +34,20 @@
         </div>
     </header>
 
-    <!-- HERO SECTION – Fixed padding to prevent overlap with navbar -->
+    <!-- HERO SECTION with logo inside placer -->
     <section id="home" class="section" style="padding-top: 120px; padding-bottom: 20px;">
         <div class="hero-placer" style="text-align: center; background: rgba(0, 212, 255, 0.05); border-radius: 12px; padding: 20px 20px; margin: 0 auto; max-width: 90%; border: 1px solid rgba(0, 212, 255, 0.2);">
             <img src="images/logo_layout.png" alt="Ubuntu GeoScience" class="logo_layout" style="display: block; margin: 0 auto; max-width: 500px; width: 100%; height: auto;">
         </div>
     </section>
 
-    <!-- ABOUT SECTION – Kept exactly as provided -->
+    <!-- ABOUT SECTION – heading now inside a placer -->
     <section id="about" class="section" style="padding-top: 0;">
         <div class="container">
-            <h2 class="section-title">About Ubuntu Geoscience</h2>
+            <!-- Placer for the about heading -->
+            <div class="hero-placer" style="text-align: center; background: rgba(0, 212, 255, 0.05); border-radius: 12px; padding: 20px 20px; margin: 0 auto 30px auto; max-width: 90%; border: 1px solid rgba(0, 212, 255, 0.2);">
+                <h2 class="section-title" style="color: var(--accent-cyan, #00d4ff); margin: 0;">About Ubuntu Geoscience</h2>
+            </div>
             <div class="about-scroll-container">
                 <div class="about-grid">
                     <div class="about-box">
@@ -68,7 +71,7 @@
         </div>
     </section>
 
-    <!-- SERVICES PREVIEW – Kept exactly as provided -->
+    <!-- SERVICES PREVIEW (cards) -->
     <main class="container">
         <div class="services-grid">
             <div class="card">
@@ -86,7 +89,7 @@
         </div>
     </main>
 
-    <!-- PROJECTS TEASER – Kept exactly as provided -->
+    <!-- PROJECTS TEASER -->
     <section class="experience-teaser section">
         <div class="container" style="text-align: center;">
             <h2>Proven Discovery Track Record</h2>
