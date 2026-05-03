@@ -54,11 +54,12 @@ body {
     display: none;
 }
 
+/* FIXED NAVBAR LOGO SIZING */
 .logo_portrait {
-    max-height: 50px;
+    max-height: 45px;       /* Slightly reduced to fit better in the 80px bar */
+    max-width: 180px;      /* Prevents it from pushing the hamburger menu away */
     width: auto;
     display: block;
-    filter: brightness(0) invert(1);
 }
 
 .nav-menu {
@@ -253,9 +254,10 @@ footer {
     margin-bottom: 40px;
 }
 
+/* FIXED CONTACT LOGO SIZING */
 .logo_portrait_contact {
-    max-height: 180px;      /* FIX: Prevents vertical takeover */
-    width: auto;            /* FIX: Maintains proportional width */
+    max-height: 150px;      /* Prevents taking up whole screen */
+    width: auto;
     display: block;
     margin: 0 auto;
 }
@@ -322,6 +324,12 @@ footer {
         background: var(--bg-card);
     }
 
+    /* FIXES NAVBAR LOGO ON MOBILE */
+    .logo_portrait {
+        max-height: 35px;   /* Shrinks logo on mobile so hamburger fits */
+        max-width: 140px;
+    }
+
     .nav-toggle:checked ~ .nav-menu {
         display: flex;
     }
@@ -330,8 +338,7 @@ footer {
         font-size: 2rem;
     }
 
-    /* Mobile fix for contact logo size */
     .logo_portrait_contact {
-        max-height: 120px; 
+        max-height: 100px;  /* Keeps contact logo small on phones */
     }
 }
