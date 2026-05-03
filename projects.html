@@ -3,48 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Experience | Ubuntu GeoScience</title>
+    <title>Completed Projects | Ubuntu Geoscience</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Favicon -->
-<link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 <body>
 
-   <header class="navbar">
-    <div class="nav-container">
-        <!-- Professional Logo Image -->
-        <div class="logo">
-            <a href="index.html">
-              <img src="images/logo-landscape-contact.png" 
-     alt="Ubuntu Geoscience Logo" 
-     class="logo_portrait_contact">
-            </a>
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo-landscape-contact.png" alt="Ubuntu Geoscience Logo" class="logo_portrait">
+                </a>
+            </div>
+            <nav>
+                <input type="checkbox" id="nav-toggle" class="nav-toggle">
+                <label for="nav-toggle" class="hamburger">
+                    <span></span><span></span><span></span>
+                </label>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="projects.html" class="active-link">Projects Completed</a></li> 
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-
-        <nav>
-            <input type="checkbox" id="nav-toggle" class="nav-toggle">
-            <label for="nav-toggle" class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
-
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active-link">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="projects.html">Experience</a></li> 
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+    </header>
 
     <main class="container">
         <section class="section-intro">
-            <h1>Selected Projects & Experience</h1>
-            <p class="bridge-tagline">Ubuntu: your technical bridge to discovery in the Arabian-Nubian Shield</p>
+            <h1>Completed Projects</h1>
+            <p class="bridge-tagline">A track record of discovery and advancement</p>
         </section>
+
+        <!-- Placeholder project image -->
+        <img src="images/project-map-placeholder.jpg" alt="Project location map" class="responsive-img" onerror="this.src='https://placehold.co/1200x200?text=Project+Map'">
 
         <div class="project-list">
             <article class="project-item">
@@ -52,9 +47,9 @@
                     <span class="location">Sudan</span>
                     <span class="deposit-type">Orogenic Gold</span>
                 </div>
-                <h3>Orogenic Gold Deposit Discovery – Galat Sufur</h3>
+                <h3>Wadi Dom Discovery – Galat Sufur</h3>
                 <div class="text-holder">
-                    <p>Played a key role in the discovery of the <strong>Wadi Dom prospect</strong> within the B14 project at Galat Sufur, contributing to a significant orogenic gold deposit discovery in the Nubian Shield.</p>
+                    <p>Key contributor to the discovery of the <strong>Wadi Dom prospect</strong> within the B14 project. This orogenic gold discovery added significant resources to the Galat Sufur mining camp.</p>
                 </div>
             </article>
 
@@ -63,9 +58,9 @@
                     <span class="location">Eritrea</span>
                     <span class="deposit-type">VMS</span>
                 </div>
-                <h3>VMS Discovery & Advancement – Bisha District</h3>
+                <h3>Bisha VMS District Advancement</h3>
                 <div class="text-holder">
-                    <p>Significant technical contribution to Volcanogenic Massive Sulfide (VMS) exploration in the Bisha camp, supporting deposit discovery and advancement through drilling programs to resource estimation.</p>
+                    <p>Technical role supporting Volcanogenic Massive Sulfide (VMS) exploration – from drilling programs through to resource estimation. Helped extend the life of this world‑class district.</p>
                 </div>
             </article>
 
@@ -74,9 +69,9 @@
                     <span class="location">Sudan</span>
                     <span class="deposit-type">Regional Mapping</span>
                 </div>
-                <h3>Orogenic Gold Exploration – Nubian Shield</h3>
+                <h3>Nubian Shield Gold Exploration</h3>
                 <div class="text-holder">
-                    <p>Extensive structural mapping and exploration work with teams across northern Sudan, spanning the Ariab, Gabgaba, and Dongola regions.</p>
+                    <p>Led structural mapping and exploration teams across the Ariab, Gabgaba, and Dongola regions. Generated multiple drill targets in underexplored corridors.</p>
                 </div>
             </article>
 
@@ -85,21 +80,20 @@
                     <span class="location">Sierra Leone</span>
                     <span class="deposit-type">ASGM Assessment</span>
                 </div>
-                <h3>Artisanal & Small-Scale Gold Mining (ASGM)</h3>
+                <h3>Artisanal Mining Assessment</h3>
                 <div class="text-holder">
-                    <p>Technical geological assessment and mapping of ASGM operations in West Africa, providing grounded insights into local mineral systems.</p>
+                    <p>Technical geological assessment and mapping of ASGM operations. Provided grounded insights into local mineral systems and scalable exploration opportunities.</p>
                 </div>
             </article>
         </div>
     </main>
-<button id="backToTop" title="Go to top">↑</button>
-<footer>
-    <div class="container">
-        <p> ©Ubuntu Geoscience. Field-based and Data-Driven Exploration Approach.</p>
-    </div>
-</footer>
 
-<button id="backToTop" title="Go to top">↑</button>
-<script src="script.js"></script>
+    <footer>
+        <div class="container">
+            <p>&copy; Ubuntu Geoscience. Field‑based and Data‑Driven Exploration Discovery.</p>
+        </div>
+    </footer>
+    <button id="backToTop" title="Go to top">↑</button>
+    <script src="script.js"></script>
 </body>
 </html>
