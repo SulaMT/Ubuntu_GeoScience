@@ -5,80 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About | Ubuntu Geoscience</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Favicon -->
-<link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 <body>
 
+    <!-- NAVBAR (same as index) -->
     <header class="navbar">
-    <div class="nav-container">
-        <!-- Professional Logo Image -->
-        <div class="logo">
-            <a href="index.html">
-             <img src="images/logo-landscape-contact.png" 
-     alt="Ubuntu Geoscience Logo" 
-     class="logo_portrait_contact">
-            </a>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo-landscape-contact.png" alt="Ubuntu Geoscience Logo" class="logo_portrait">
+                </a>
+            </div>
+            <nav>
+                <input type="checkbox" id="nav-toggle" class="nav-toggle">
+                <label for="nav-toggle" class="hamburger">
+                    <span></span><span></span><span></span>
+                </label>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active-link">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="projects.html">Projects Completed</a></li> 
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-
-        <nav>
-            <input type="checkbox" id="nav-toggle" class="nav-toggle">
-            <label for="nav-toggle" class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
-
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active-link">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="projects.html">Experience</a></li> 
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+    </header>
 
     <main class="container">
         <section class="about-hero">
             <h1>Exploration Geologist with Over 15 Years of Discovery Experience</h1>
-            <p class="bridge-tagline">Ubuntu: your technical bridge to discovery in the Arabian-Nubian Shield</p>
+            <p class="bridge-tagline">Ubuntu: your technical bridge to discovery in the Arabian‑Nubian Shield</p>
         </section>
 
-        <section class="about-content">
-            <div class="main-narrative">
-                <div class="text-holder">
-                    <p>Ubuntu GeoScience was founded by <strong>MT Menghisteab and Colleagues </strong>, an exploration geologist with more than 15 years of hands-on experience in mineral exploration and project leadership across East and West Africa.</p>
-                </div>
-                
-                <div class="text-holder">
-                    <p>Guided by the <strong>Ubuntu</strong> philosophy and a <strong>field-based and data-driven exploration approach</strong>, we believe that real discovery comes from the deep interconnection between field observations, geological understanding, and integrated data.</p>
-                </div>
-                
-                <div class="text-holder">
-                    <p>At Ubuntu Geoscience, we deliver practical, field-grounded geological expertise that turns prospects into discoveries and advances projects toward development.</p>
-                </div>
+        <!-- Add a featured image -->
+        <img src="images/field-geology-placeholder.jpg" alt="Geologist mapping in the Nubian Shield" class="responsive-img" onerror="this.src='https://placehold.co/1200x400?text=Field+Geology+Photo'">
+
+        <div class="about-content">
+            <div class="text-holder">
+                <p><strong>Ubuntu GeoScience</strong> was founded by Mussie T. Menghisteab, an exploration geologist with more than 15 years of hands‑on experience in mineral exploration and project leadership across East and West Africa. We specialise in the <strong>Arabian‑Nubian Shield</strong> and analogous Precambrian terrains.</p>
+            </div>
+            
+            <div class="text-holder">
+                <p>Guided by the <strong>Ubuntu philosophy</strong> – “I am because we are” – we believe that real discovery emerges from deep collaboration: between geologists, data, and local communities. Our approach is <strong>field‑first</strong> and <strong>data‑driven</strong>, ensuring every decision is anchored in outcrop reality.</p>
+            </div>
+            
+            <div class="text-holder">
+                <p>We deliver practical, field‑grounded geological expertise that turns prospects into discoveries and advances projects toward development. Whether you need structural mapping, target generation, or exploration management, Ubuntu GeoScience acts as an extension of your team.</p>
             </div>
 
-            <div class="experience-highlights">
+            <div class="text-holder">
                 <h3>Key Experience Highlights</h3>
-                <div class="text-holder">
-                    <ul class="highlight-list">
-                        <li>Key contributor to the <strong>discovery of the Wadi Dom prospect</strong> in the B14 Gold Project at Galat Sufur, Sudan.</li>
-                        <li>Extensive orogenic gold exploration across the Nubian Shield in northern Sudan (Ariab – Gabgaba – Dongola corridor).</li>
-                        <li>Technical involvement in the Bisha VMS district in Eritrea, supporting deposit advancement from exploration drilling through to resource estimation.</li>
-                        <li>Structural mapping and core logging of the Daero Paulos Porphyry Gold System in the Asmara Belt, Eritrea.</li>
-                        <li>Geological assessment of artisanal and small-scale gold mining projects in Sierra Leone.</li>
-                    </ul>
-                </div>
+                <ul>
+                    <li>Key contributor to the discovery of the <strong>Wadi Dom prospect</strong> (Galat Sufur, Sudan) – a significant orogenic gold discovery.</li>
+                    <li>Extensive gold exploration across the Nubian Shield: Ariab, Gabgaba, Dongola corridors.</li>
+                    <li>Technical role in the <strong>Bisha VMS district</strong> (Eritrea) – from exploration drilling to resource estimation.</li>
+                    <li>Structural mapping and core logging of the Daero Paulos Porphyry Gold System, Asmara Belt.</li>
+                    <li>Artisanal and small‑scale gold mining (ASGM) assessment in Sierra Leone.</li>
+                </ul>
             </div>
-        </section>
+        </div>
     </main>
 
     <footer>
-        <p>&copy; ©Ubuntu Geoscience. Field-based and Data-Driven Exploration Approach.</p>
+        <div class="container">
+            <p>&copy; Ubuntu Geoscience. Field‑based and Data‑Driven Exploration Discovery.</p>
+        </div>
     </footer>
-<button id="backToTop" title="Go to top">↑</button>
+    <button id="backToTop" title="Go to top">↑</button>
+    <script src="script.js"></script>
 </body>
 </html>
