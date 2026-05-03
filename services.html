@@ -3,87 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | Ubuntu GeoScience</title>
+    <title>Services | Ubuntu Geoscience</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Favicon -->
-<link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 <body>
 
-   <header class="navbar">
-    <div class="nav-container">
-        <!-- Professional Logo Image -->
-        <div class="logo">
-            <a href="index.html">
-               <img src="images/logo-landscape-contact.png" 
-     alt="Ubuntu Geoscience Logo" 
-     class="logo_portrait_contact">
-            </a>
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo-landscape-contact.png" alt="Ubuntu Geoscience Logo" class="logo_portrait">
+                </a>
+            </div>
+            <nav>
+                <input type="checkbox" id="nav-toggle" class="nav-toggle">
+                <label for="nav-toggle" class="hamburger">
+                    <span></span><span></span><span></span>
+                </label>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html" class="active-link">Services</a></li>
+                    <li><a href="projects.html">Projects Completed</a></li> 
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-
-        <nav>
-            <input type="checkbox" id="nav-toggle" class="nav-toggle">
-            <label for="nav-toggle" class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
-
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active-link">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="projects.html">Experience</a></li> 
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+    </header>
 
     <main class="container">
         <section class="services-header">
             <h1>Our Services</h1>
-            <p class="bridge-tagline">Ubuntu: your technical bridge to discovery in the Arabian-Nubian Shield</p>
+            <p class="bridge-tagline">Technical solutions for every stage of mineral exploration</p>
         </section>
+
+        <!-- Placeholder image for services -->
+        <img src="images/core-logging-placeholder.jpg" alt="Geologist logging drill core" class="responsive-img" onerror="this.src='https://placehold.co/1200x300?text=Core+Logging'">
 
         <div class="services-grid">
             <div class="service-card">
                 <h3>Field Exploration & Geological Mapping</h3>
                 <div class="text-holder">
-                    <p>Expert geological mapping, structural analysis, and prospect generation in complex Precambrian terrains.</p>
+                    <p>Detailed structural and lithological mapping in complex Precambrian terrains. We generate high‑confidence prospectivity models and drill targets.</p>
                 </div>
             </div>
 
             <div class="service-card">
                 <h3>Mineral Exploration Project Management</h3>
                 <div class="text-holder">
-                    <p>End-to-end leadership of exploration programs — from target generation through drilling to resource estimation.</p>
+                    <p>End‑to‑end leadership: program design, contractor supervision, QAQC, data validation, and resource estimation. We de‑risk your investment.</p>
                 </div>
             </div>
 
             <div class="service-card">
                 <h3>Geological Data Integration</h3>
                 <div class="text-holder">
-                    <p>Merging field observations, geochemical, geophysical, and structural data into coherent, actionable geological models.</p>
+                    <p>Merge geochemistry, geophysics, structural, and alteration data into coherent 3D models. Actionable insights, not spreadsheets.</p>
                 </div>
             </div>
 
             <div class="service-card">
                 <h3>Geospatial Analysis & GIS</h3>
                 <div class="text-holder">
-                    <p>Precision mapping and spatial analysis to support field-based exploration decisions.</p>
+                    <p>Precision mapping, remote sensing, and spatial analysis using QGIS and ArcGIS. From grassroots to mine‑scale.</p>
                 </div>
             </div>
         </div>
     </main>
-<button id="backToTop" title="Go to top">↑</button>
-<footer>
-    <div class="container">
-        <p>©Ubuntu Geoscience. Field-based and Data-Driven Exploration Approach.</p>
-    </div>
-</footer>
 
-<button id="backToTop" title="Go to top">↑</button>
-<script src="script.js"></script>
+    <footer>
+        <div class="container">
+            <p>&copy; Ubuntu Geoscience. Field‑based and Data‑Driven Exploration Discovery.</p>
+        </div>
+    </footer>
+    <button id="backToTop" title="Go to top">↑</button>
+    <script src="script.js"></script>
 </body>
 </html>
