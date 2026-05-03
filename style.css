@@ -454,4 +454,9 @@ footer {
     margin: 15px 0;
 }
 
+footer p {
+    font-size: 0.7rem;      /* smaller */
+    opacity: 0.6;           /* faint */
+}
+
 /* Ensure contact form (if any) is centered – already done */
