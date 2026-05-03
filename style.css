@@ -54,10 +54,10 @@ body {
     display: none;
 }
 
-/* FIXED NAVBAR LOGO SIZING */
+/* Navbar logo - properly sized */
 .logo_portrait {
-    max-height: 45px;       /* Slightly reduced to fit better in the 80px bar */
-    max-width: 180px;      /* Prevents it from pushing the hamburger menu away */
+    max-height: 45px;
+    max-width: 180px;
     width: auto;
     display: block;
 }
@@ -110,13 +110,23 @@ body {
 }
 
 /* ==========================================================================
-   4. GENERAL SECTIONS
+   4. GENERAL SECTIONS – FIX SCROLL MARGIN (prevents hiding under navbar)
    ========================================================================== */
 .section,
 .experience-teaser,
 .container:first-of-type {
     padding-top: calc(var(--navbar-height) + 40px);
     padding-bottom: 60px;
+}
+
+/* All sections need scroll margin for anchor links */
+section, 
+.section,
+[id^="home"], 
+[id^="about"], 
+[id^="services"], 
+[id^="contact"] {
+    scroll-margin-top: var(--navbar-height);
 }
 
 #home.section {
@@ -232,7 +242,7 @@ footer {
 }
 
 /* ==========================================================================
-   7. CONTACT PAGE
+   7. CONTACT PAGE – FIXED LOGO SIZING (no cut-off)
    ========================================================================== */
 #contact {
     background-color: var(--bg-dark);
@@ -248,16 +258,19 @@ footer {
     margin: 0 auto;
     text-align: center;
     padding: 40px 20px;
+    overflow-x: visible;   /* prevents any accidental clipping */
 }
 
 .contact-logo {
     margin-bottom: 40px;
 }
 
-/* FIXED CONTACT LOGO SIZING */
+/* Contact logo – now properly constrained */
 .logo_portrait_contact {
-    max-height: 150px;      /* Prevents taking up whole screen */
+    max-width: 180px;
+    max-height: 150px;
     width: auto;
+    height: auto;
     display: block;
     margin: 0 auto;
 }
@@ -298,7 +311,7 @@ footer {
 }
 
 /* ==========================================================================
-   8. BACK TO TOP BUTTON & RESPONSIVE
+   8. BACK TO TOP BUTTON
    ========================================================================== */
 #backToTop {
     position: fixed;
@@ -318,27 +331,105 @@ footer {
     z-index: 999;
 }
 
+/* ==========================================================================
+   9. RESPONSIVE DESIGN (FIXES FOR MOBILE)
+   ========================================================================== */
 @media (max-width: 768px) {
+    /* Smaller navbar height on mobile */
+    :root {
+        --navbar-height: 60px;
+    }
+    .nav-container {
+        height: 60px;
+    }
+
+    /* Smaller navbar logo */
+    .logo_portrait {
+        max-height: 35px;
+        max-width: 140px;
+    }
+
+    /* Hide hamburger menu – restyled */
     .nav-menu {
         display: none;
         background: var(--bg-card);
     }
 
-    /* FIXES NAVBAR LOGO ON MOBILE */
-    .logo_portrait {
-        max-height: 35px;   /* Shrinks logo on mobile so hamburger fits */
-        max-width: 140px;
+    .hamburger {
+        display: flex;
+        cursor: pointer;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .hamburger span {
+        width: 25px;
+        height: 3px;
+        background-color: var(--accent-cyan);
+        transition: all 0.3s ease;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background: var(--bg-card);
+        padding: 20px;
+        gap: 15px;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
     }
 
     .nav-toggle:checked ~ .nav-menu {
+        transform: translateX(0);
         display: flex;
+    }
+
+    /* Hero section adjustments */
+    .header-wrapper {
+        padding-top: calc(60px + 40px);
+    }
+
+    .logo_layout {
+        max-width: 85%;          /* reduces hero logo crowding */
+        margin-bottom: 15px;
     }
 
     .text-section h1 {
         font-size: 2rem;
     }
 
-    .logo_portrait_contact {
-        max-height: 100px;  /* Keeps contact logo small on phones */
+    /* Section padding update for new navbar height */
+    .section,
+    .experience-teaser,
+    .container:first-of-type {
+        padding-top: calc(60px + 30px);
     }
+
+    /* Contact logo smaller on mobile */
+    .logo_portrait_contact {
+        max-width: 140px;
+        max-height: 120px;
+    }
+
+    /* Update scroll margin for mobile navbar height */
+    section, 
+    .section,
+    [id^="home"], 
+    [id^="about"], 
+    [id^="services"], 
+    [id^="contact"] {
+        scroll-margin-top: 60px;
+    }
+}
+
+.card p {
+    background: #ffffff;
+    color: #2c3e50;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 3px solid var(--accent-gold);
+    margin-top: 15px;
 }
