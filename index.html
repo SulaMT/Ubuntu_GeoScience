@@ -34,15 +34,15 @@
         </div>
     </header>
 
-    <!-- HERO SECTION with logo inside a centered placer (same style as other pages) -->
-    <section id="home" class="section">
-        <div class="hero-placer" style="text-align: center; background: rgba(0, 212, 255, 0.05); border-radius: 12px; padding: 30px 20px; margin: 20px auto; max-width: 90%; border: 1px solid rgba(0, 212, 255, 0.2);">
-            <img src="images/logo_layout.png" alt="Ubuntu GeoScience" class="logo_layout" style="display: block; margin: 0 auto;">
+    <!-- HERO SECTION – no extra top margin; let navbar handle spacing -->
+    <section id="home" class="section" style="padding-top: calc(var(--navbar-height, 80px) + 20px); padding-bottom: 20px;">
+        <div class="hero-placer" style="text-align: center; background: rgba(0, 212, 255, 0.05); border-radius: 12px; padding: 20px 20px; margin: 0 auto; max-width: 90%; border: 1px solid rgba(0, 212, 255, 0.2);">
+            <img src="images/logo_layout.png" alt="Ubuntu GeoScience" class="logo_layout" style="display: block; margin: 0 auto; max-width: 100%;">
         </div>
     </section>
 
-    <!-- ABOUT SECTION (scrolling white boxes) -->
-    <section id="about" class="section">
+    <!-- ABOUT SECTION – reduced top padding to close the gap -->
+    <section id="about" class="section" style="padding-top: 0;">
         <div class="container">
             <h2 class="section-title">About Ubuntu Geoscience</h2>
             <div class="about-scroll-container">
