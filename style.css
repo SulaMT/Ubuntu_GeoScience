@@ -24,6 +24,17 @@ body {
     background-color: var(--bg-dark);
     scroll-padding-top: var(--navbar-height);
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main, .section, .container, .experience-teaser {
+    flex: 1;
+}
+
+footer {
+    margin-top: auto;
 }
 
 /* ==========================================================================
@@ -54,7 +65,6 @@ body {
     display: none;
 }
 
-/* Navbar logo - properly sized */
 .logo_portrait {
     max-height: 45px;
     max-width: 180px;
@@ -91,7 +101,7 @@ body {
 
 .logo_layout {
     width: 100%;
-    max-width: 1200px;
+    max-width: 800px;
     height: auto;
     margin-bottom: 30px;
 }
@@ -110,7 +120,7 @@ body {
 }
 
 /* ==========================================================================
-   4. GENERAL SECTIONS – FIX SCROLL MARGIN (prevents hiding under navbar)
+   4. GENERAL SECTIONS – FIX NAVBAR OVERLAP
    ========================================================================== */
 .section,
 .experience-teaser,
@@ -119,20 +129,17 @@ body {
     padding-bottom: 60px;
 }
 
-/* All sections need scroll margin for anchor links */
-section, 
-.section,
-[id^="home"], 
-[id^="about"], 
-[id^="services"], 
-[id^="contact"] {
-    scroll-margin-top: var(--navbar-height);
-}
-
 #home.section {
     padding-top: 0;
 }
 
+section, .section, [id] {
+    scroll-margin-top: var(--navbar-height);
+}
+
+/* ==========================================================================
+   5. ABOUT SECTION – WHITE BOXES (HOME PAGE)
+   ========================================================================== */
 #about {
     background-color: #0d1b2a;
     color: white;
@@ -172,7 +179,7 @@ section,
 }
 
 /* ==========================================================================
-   5. SERVICES GRID & CARDS
+   6. SERVICES GRID & CARDS (HOME PAGE PREVIEW)
    ========================================================================== */
 .container {
     max-width: 1100px;
@@ -184,7 +191,7 @@ section,
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 25px;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .card {
@@ -211,7 +218,7 @@ section,
 }
 
 /* ==========================================================================
-   6. CTA & FOOTER
+   7. EXPERIENCE TEASER (HOME PAGE)
    ========================================================================== */
 .experience-teaser {
     background-color: #112240;
@@ -234,15 +241,44 @@ section,
     background: rgba(0, 212, 255, 0.1);
 }
 
-footer {
-    padding: 40px 20px;
-    text-align: center;
-    color: #8892b0;
-    font-size: 0.85rem;
+/* ==========================================================================
+   8. TEXT HOLDER (for services, experience, about pages)
+   ========================================================================== */
+.text-holder {
+    background: #ffffff;
+    color: #2c3e50;
+    padding: 20px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-left: 5px solid var(--accent-gold);
+    margin: 20px 0;
+}
+
+.text-holder p {
+    margin-bottom: 10px;
+    line-height: 1.7;
+}
+
+.text-holder p:last-child {
+    margin-bottom: 0;
+}
+
+.text-holder h3 {
+    margin-bottom: 12px;
+    color: var(--primary-dark);
+}
+
+.text-holder ul, .text-holder ol {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.text-holder li {
+    margin-bottom: 8px;
 }
 
 /* ==========================================================================
-   7. CONTACT PAGE – FIXED LOGO SIZING (no cut-off)
+   9. CONTACT PAGE
    ========================================================================== */
 #contact {
     background-color: var(--bg-dark);
@@ -258,14 +294,13 @@ footer {
     margin: 0 auto;
     text-align: center;
     padding: 40px 20px;
-    overflow-x: visible;   /* prevents any accidental clipping */
+    overflow-x: visible;
 }
 
 .contact-logo {
     margin-bottom: 40px;
 }
 
-/* Contact logo – now properly constrained */
 .logo_portrait_contact {
     max-width: 180px;
     max-height: 150px;
@@ -311,7 +346,7 @@ footer {
 }
 
 /* ==========================================================================
-   8. BACK TO TOP BUTTON
+   10. BACK TO TOP BUTTON
    ========================================================================== */
 #backToTop {
     position: fixed;
@@ -328,47 +363,52 @@ footer {
     display: none;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
     z-index: 999;
 }
 
+#backToTop:hover {
+    background-color: white;
+    transform: scale(1.05);
+}
+
 /* ==========================================================================
-   9. RESPONSIVE DESIGN (FIXES FOR MOBILE)
+   11. RESPONSIVE DESIGN
    ========================================================================== */
 @media (max-width: 768px) {
-    /* Smaller navbar height on mobile */
     :root {
         --navbar-height: 60px;
     }
+    
     .nav-container {
         height: 60px;
     }
-
-    /* Smaller navbar logo */
+    
     .logo_portrait {
         max-height: 35px;
         max-width: 140px;
     }
-
-    /* Hide hamburger menu – restyled */
-    .nav-menu {
-        display: none;
-        background: var(--bg-card);
+    
+    .logo_portrait_contact {
+        max-width: 120px;
+        max-height: 100px;
     }
-
+    
     .hamburger {
         display: flex;
-        cursor: pointer;
         flex-direction: column;
         gap: 5px;
+        cursor: pointer;
     }
-
+    
     .hamburger span {
         width: 25px;
         height: 3px;
         background-color: var(--accent-cyan);
         transition: all 0.3s ease;
     }
-
+    
     .nav-menu {
         position: absolute;
         top: 60px;
@@ -380,98 +420,41 @@ footer {
         gap: 15px;
         transform: translateX(-100%);
         transition: transform 0.3s ease;
-    }
-
-    .nav-toggle:checked ~ .nav-menu {
-        transform: translateX(0);
         display: flex;
     }
-
-    /* Hero section adjustments */
+    
+    .nav-toggle:checked ~ .nav-menu {
+        transform: translateX(0);
+    }
+    
+    .nav-toggle {
+        display: none;
+    }
+    
     .header-wrapper {
         padding-top: calc(60px + 40px);
     }
-
+    
     .logo_layout {
-        max-width: 85%;          /* reduces hero logo crowding */
+        max-width: 85%;
         margin-bottom: 15px;
     }
-
+    
     .text-section h1 {
         font-size: 2rem;
     }
-
-    /* Section padding update for new navbar height */
+    
     .section,
     .experience-teaser,
     .container:first-of-type {
         padding-top: calc(60px + 30px);
     }
-
-    /* Contact logo smaller on mobile */
-    .logo_portrait_contact {
-        max-width: 140px;
-        max-height: 120px;
+    
+    .about-box {
+        flex: 1 1 100%;
     }
-
-    /* Update scroll margin for mobile navbar height */
-    section, 
-    .section,
-    [id^="home"], 
-    [id^="about"], 
-    [id^="services"], 
-    [id^="contact"] {
+    
+    section, .section, [id] {
         scroll-margin-top: 60px;
-    }
-}
-
-.card p {
-    background: #ffffff;
-    color: #2c3e50;
-    padding: 20px;
-    border-radius: 8px;
-    border-left: 3px solid var(--accent-gold);
-    margin-top: 15px;
-}
-
-/* ==========================================================================
-   TEXT HOLDER STYLES (for services & experience paragraphs)
-   ========================================================================== */
-.text-holder {
-    background: #ffffff;
-    color: #2c3e50;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    border-left: 5px solid var(--accent-gold);
-    margin-top: 15px;
-}
-
-.text-holder p {
-    margin-bottom: 10px;
-    line-height: 1.6;
-}
-
-.text-holder p:last-child {
-    margin-bottom: 0;
-}
-
-/* ==========================================================================
-   CONTACT PAGE LOGO - ENSURE IT'S NOT HUGE
-   ========================================================================== */
-.logo_portrait_contact {
-    max-width: 180px;
-    max-height: 150px;
-    width: auto;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-/* Mobile adjustment for contact logo */
-@media (max-width: 768px) {
-    .logo_portrait_contact {
-        max-width: 120px;
-        max-height: 100px;
     }
 }
