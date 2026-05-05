@@ -166,6 +166,29 @@ section, .section, [id] {
     padding-bottom: 10px;
 }
 
+/* 1. Ensure the container handles alignment strictly */
+.about-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start; /* Keeps boxes from stretching vertically if heights differ */
+}
+
+/* 2. Targeted fix for the photo box */
+.about-box img {
+    display: block;
+    margin: 0 auto 15px auto; /* Centers the image and adds space below */
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* 3. If you want a box with an image to NOT grow to full width */
+.about-box.photo-box {
+    flex: 0 1 400px; /* Limits the width so it stays centered and crisp */
+    text-align: center;
+}
 /* ==========================================================================
    6. SERVICES GRID & CARDS (HOME PAGE PREVIEW)
    ========================================================================== */
