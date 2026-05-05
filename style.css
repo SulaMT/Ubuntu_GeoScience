@@ -66,13 +66,13 @@ footer {
 }
 
 .logo_portrait {
-    max-height: 45px;
-    max-width: 180px;
+    max-height: 60px; /* Increased from 45px */
+    max-width: 240px;  /* Increased from 180px */
     width: auto;
     display: block;
-    object-fit: contain; /* Added to prevent logo stretching */
+    object-fit: contain;
+    transition: transform 0.3s ease; /* Optional: adds a smooth feel if you scale it later */
 }
-
 .nav-menu {
     display: flex;
     list-style: none;
@@ -366,22 +366,25 @@ section, .section, [id] {
    ========================================================================== */
 @media (max-width: 768px) {
     :root {
-        --navbar-height: 60px;
+        --navbar-height: 70px; /* Increased from 60px to give the bigger logo breathing room */
     }
     
     .nav-container {
-        height: 60px;
+        height: 70px;
     }
     
     .logo_portrait {
-        max-height: 35px;
-        max-width: 140px;
+        max-height: 45px; /* Increased from 35px */
+        max-width: 180px;  /* Increased from 140px */
     }
     
     .logo_portrait_contact {
-        max-width: 120px;
-        max-height: 100px;
+        max-width: 140px; /* Increased from 120px */
+        max-height: 120px; /* Increased from 100px */
     }
+    
+    /* Keep the rest of your hamburger and nav-menu styles below this... */
+}
     
     .hamburger {
         display: flex;
