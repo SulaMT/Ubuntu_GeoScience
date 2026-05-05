@@ -149,7 +149,6 @@ section, .section, [id] {
 }
 
 .about-box {
- .about-box {
     background: #ffffff;
     color: #2c3e50;
     padding: 25px;
@@ -158,7 +157,19 @@ section, .section, [id] {
     min-width: 300px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     border-left: 5px solid var(--accent-gold);
-    text-align: center; /*  Add this line here */
+
+    /* ADD THESE THREE LINES */
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+/* ADD THIS NEW RULE */
+.about-box img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 4px;
 }
 
 .about-box h3 {
