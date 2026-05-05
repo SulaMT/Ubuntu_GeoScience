@@ -448,17 +448,15 @@ section, .section, [id] {
 
 /* Minor fixes */
 footer {
-    text-align: center;
-}
-
-.responsive-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin: 15px 0;
+    margin-top: auto;
+    width: 100%;           /* Ensures the footer spans the full width */
+    text-align: center;    /* Centers the text inside */
+    padding: 20px 0;       /* Adds some breathing room */
+    background-color: var(--bg-dark); /* Keeps it consistent with your theme */
 }
 
 footer p {
-    font-size: 0.7rem;      /* smaller */
-    opacity: 0.6;           /* faint */
+    font-size: 0.7rem; 
+    opacity: 0.6;
+    margin: 0 auto;        /* Centers the paragraph block itself */
 }
