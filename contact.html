@@ -1,151 +1,93 @@
-import { useState } from "react"; import { motion } from "framer-motion"; import { Card, CardContent } from "@/components/ui/card"; import { Input } from "@/components/ui/input"; import { Textarea } from "@/components/ui/textarea"; import { Button } from "@/components/ui/button"; import { Label } from "@/components/ui/label";
+<main class="contact-page">
 
-export default function ContactPage() { const [step, setStep] = useState(1);
+    <div class="contact-intro">
+        <h1>Contact Ubuntu Geoscience</h1>
+        <p>
+            Exploration-stage consultancy support across the Arabian-Nubian Shield,
+            East Africa, and frontier terrains.
+        </p>
+    </div>
 
-const [form, setForm] = useState({ name: "", email: "", phone: "", company: "", stage: "", location: "", message: "", file: null, preferredContact: "email", });
+    <div class="direct-contact-box">
 
-const handleChange = (e) => { const { name, value, files } = e.target; setForm({ ...form, [name]: files ? files[0] : value, }); };
+        <p><strong>Direct Contact</strong></p>
 
-const nextStep = () => setStep((s) => Math.min(s + 1, 3)); const prevStep = () => setStep((s) => Math.max(s - 1, 1));
+        <div class="direct-contact-links">
 
-const handleSubmit = (e) => { e.preventDefault(); alert("Inquiry submitted successfully"); };
-
-return ( <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-slate-100 p-6"> <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="w-full max-w-3xl" > <Card className="shadow-2xl rounded-2xl"> <CardContent className="p-8"> <h1 className="text-3xl font-bold mb-2">Contact & Project Intake</h1> <p className="text-gray-600 mb-6"> Geological consultancy inquiry form (optional multi-channel contact available) </p>
-
-{/* Direct Contact Options */}
-        <div className="mb-6 p-4 bg-gray-50 rounded-xl">
-          <p className="font-semibold mb-2">Prefer direct contact?</p>
-          <div className="flex flex-col md:flex-row gap-3">
-            <a className="text-blue-600" href="mailto:info@ubuntugeoscience.com">
-      p        📧 Email: info@ubuntugeoscience.com
+            <a href="mailto:info@ubuntugeoscience.com">
+                info@ubuntugeoscience.com
             </a>
-            <a className="text-green-600" href="tel:+966535567001">
-  📞 +966 535 567 001
-</a>
 
-<a className="text-green-600" href="tel:+249912110469">
-  📞 +249 912 110 469
-</a>
-          </div>
+            <a href="tel:+966535567001">
+                +966 535 567 001
+            </a>
+
+            <a href="tel:+249912110469">
+                +249 912 110 469
+            </a>
+
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-5">
-          {/* STEP 1 */}
-          {step === 1 && (
-            <div className="space-y-4">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+    </div>
+
+    <div class="contact-form-wrapper">
+
+        <form>
+
+            <div class="form-section-title">
+                Project Enquiry
+            </div>
+
+            <div class="form-grid">
+
                 <div>
-                  <Label>Name</Label>
-                  <Input name="name" value={form.name} onChange={handleChange} required />
+                    <label>Name</label>
+                    <input type="text">
                 </div>
+
                 <div>
-                  <Label>Email (optional if calling)</Label>
-                  <Input name="email" value={form.email} onChange={handleChange} />
+                    <label>Email</label>
+                    <input type="email">
                 </div>
-              </div>
 
-              <div>
-                <Label>Phone (optional)</Label>
-                <Input name="phone" value={form.phone} onChange={handleChange} />
-              </div>
+                <div>
+                    <label>Company</label>
+                    <input type="text">
+                </div>
 
-              <div>
-                <Label>Preferred Contact Method</Label>
-                <select
-                  name="preferredContact"
-                  value={form.preferredContact}
-                  onChange={handleChange}
-                  className="w-full border rounded-md p-2"
-                >
-                  <option value="email">Email</option>
-                  <option value="phone">Phone</option>
-                  <option value="whatsapp">WhatsApp</option>
-                </select>
-              </div>
+                <div>
+                    <label>Project Stage</label>
+
+                    <select>
+                        <option>Reconnaissance</option>
+                        <option>Target Generation</option>
+                        <option>Drilling Support</option>
+                        <option>Resource Definition</option>
+                    </select>
+                </div>
+
+                <div class="full-width">
+                    <label>Project Details</label>
+
+                    <textarea></textarea>
+                </div>
+
             </div>
-          )}
 
-          {/* STEP 2 */}
-          {step === 2 && (
-            <div className="space-y-4">
-              <div>
-                <Label>Company / Organization (optional)</Label>
-                <Input name="company" value={form.company} onChange={handleChange} />
-              </div>
+            <div class="form-actions">
 
-              <div>
-                <Label>Project Stage</Label>
-                <select
-                  name="stage"
-                  value={form.stage}
-                  onChange={handleChange}
-                  className="w-full border rounded-md p-2"
-                  required
-                >
-                  <option value="">Select stage</option>
-                  <option value="reconnaissance">Reconnaissance</option>
-                  <option value="targeting">Targeting</option>
-                  <option value="drilling">Drilling</option>
-                  <option value="resource_definition">Resource Definition</option>
-                </select>
-              </div>
+                <button type="submit" class="cta-button">
+                    Submit Enquiry
+                </button>
 
-              <div>
-                <Label>Project Location (optional map reference)</Label>
-                <Input
-                  name="location"
-                  value={form.location}
-                  onChange={handleChange}
-                  placeholder="Coordinates, region, or license block"
-                />
-              </div>
             </div>
-          )}
 
-          {/* STEP 3 */}
-          {step === 3 && (
-            <div className="space-y-4">
-              <div>
-                <Label>Project Details</Label>
-                <Textarea
-                  name="message"
-                  value={form.message}
-                  onChange={handleChange}
-                  rows={5}
-                  placeholder="Describe geology, targets, datasets, constraints..."
-                  required
-                />
-              </div>
-
-              <div>
-                <Label>Upload Supporting Files (optional)</Label>
-                <Input type="file" name="file" onChange={handleChange} />
-              </div>
-            </div>
-          )}
-
-          {/* Navigation */}
-          <div className="flex justify-between pt-4">
-            {step > 1 && (
-              <Button type="button" onClick={prevStep}>
-                Back
-              </Button>
-            )}
-
-            {step < 3 && (
-              <Button type="button" onClick={nextStep}>
-                Next
-              </Button>
-            )}
-
-            {step === 3 && (
-              <Button type="submit">Submit Inquiry</Button>
-            )}
-          </div>
         </form>
-      </CardContent>
-    </Card>
-  </motion.div>
-</div>
 
-); }
+        <div class="form-note">
+            All technically relevant exploration enquiries are reviewed directly.
+        </div>
+
+    </div>
+
+</main>
