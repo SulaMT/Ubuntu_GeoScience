@@ -3,98 +3,258 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Completed Projects | Ubuntu Geoscience</title>
+
+    <title>Projects | Ubuntu Geoscience</title>
+
+    <meta name="description"
+          content="Selected mineral exploration projects across the Arabian-Nubian Shield, Eritrea, Sudan, and West Africa.">
+
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <link rel="icon"
+          type="image/png"
+          href="images/favicon.png">
 </head>
+
 <body>
 
-    <header class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="images/logo-landscape-contact.png" alt="Ubuntu Geoscience Logo" class="logo_portrait">
-                </a>
-            </div>
-            <nav>
-                <input type="checkbox" id="nav-toggle" class="nav-toggle">
-                <label for="nav-toggle" class="hamburger">
-                    <span></span><span></span><span></span>
-                </label>
-                <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="projects.html" class="active-link">Projects Completed</a></li> 
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
 
-    <main class="container">
-        <!-- Centered placer for the title and tagline (same as About page) -->
-        <div class="hero-placer" style="text-align: center; background: rgba(0, 212, 255, 0.05); border-radius: 12px; padding: 30px 20px; margin: 20px 0; border: 1px solid rgba(0, 212, 255, 0.2);">
-            <h1 style="color: var(--accent-cyan, #00d4ff); font-size: 2rem; margin-bottom: 10px;">Completed Projects</h1>
-            <p class="bridge-tagline" style="font-size: 1.2rem; font-style: italic; color: var(--text-main, #ccd6f6);">A track record of discovery and advancement</p>
+<header class="navbar">
+
+    <div class="nav-container">
+
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo-landscape-contact.png"
+                     alt="Ubuntu Geoscience"
+                     class="logo_portrait">
+            </a>
         </div>
 
-        <!-- Project image below the placer -->
-        <img src="images/project-map-placeholder.jpg" alt="Project location map" class="responsive-img" onerror="this.src='https://placehold.co/1200x200?text=Project+Map'">
+        <nav>
 
-        <div class="project-list">
-            <article class="project-item">
-                <div class="project-meta">
-                    <span class="location">Sudan</span>
-                    <span class="deposit-type">Orogenic Gold</span>
-                </div>
-                <h3>Wadi Dom Discovery – Galat Sufur</h3>
-                <div class="text-holder">
-                    <p>Key contributor to the discovery of the <strong>Wadi Dom prospect</strong> within the B14 project. This orogenic gold discovery added significant resources to the Galat Sufur mining camp.</p>
-                </div>
-            </article>
+            <input type="checkbox"
+                   id="nav-toggle"
+                   class="nav-toggle">
 
-            <article class="project-item">
-                <div class="project-meta">
-                    <span class="location">Eritrea</span>
-                    <span class="deposit-type">VMS</span>
-                </div>
-                <h3>Bisha VMS District Advancement</h3>
-                <div class="text-holder">
-                    <p>Technical role supporting Volcanogenic Massive Sulfide (VMS) exploration – from drilling programs through to resource estimation. Helped extend the life of this world‑class district.</p>
-                </div>
-            </article>
+            <label for="nav-toggle"
+                   class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
 
-            <article class="project-item">
-                <div class="project-meta">
-                    <span class="location">Sudan</span>
-                    <span class="deposit-type">Regional Mapping</span>
-                </div>
-                <h3>Nubian Shield Gold Exploration</h3>
-                <div class="text-holder">
-                    <p>Led structural mapping and exploration teams across the Ariab, Gabgaba, and Dongola regions. Generated multiple drill targets in underexplored corridors.</p>
-                </div>
-            </article>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="projects.html" class="active-link">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
 
-            <article class="project-item">
-                <div class="project-meta">
-                    <span class="location">Sierra Leone</span>
-                    <span class="deposit-type">ASGM Assessment</span>
-                </div>
-                <h3>Artisanal Mining Assessment</h3>
-                <div class="text-holder">
-                    <p>Technical geological assessment and mapping of ASGM operations. Provided grounded insights into local mineral systems and scalable exploration opportunities.</p>
-                </div>
-            </article>
-        </div>
-    </main>
+        </nav>
 
-    <footer>
-        <div class="container">
-            <p>&copy; Ubuntu Geoscience.</p>
-        </div>
-    </footer>
-    <button id="backToTop" title="Go to top">↑</button>
-    <script src="script.js"></script>
+    </div>
+
+</header>
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="hero">
+
+    <h1>Selected Exploration Projects</h1>
+
+    <p class="hero-subtitle">
+        Mineral exploration experience across orogenic gold,
+        VMS, and structurally controlled mineral systems.
+    </p>
+
+</section>
+
+<!-- =========================================================
+     PROJECT 1
+========================================================= -->
+
+<section class="section">
+
+    <h2>Galat Sufur South Gold Discovery — Sudan</h2>
+
+    <img src="images/gss-project.jpg"
+         alt="Galat Sufur South Project"
+         class="responsive-img">
+
+    <div class="text-holder">
+
+        <p>
+            Contribution to the discovery and advancement of the
+            Galat Sufur South (GSS) orogenic gold system within
+            the Nubian Shield of northeastern Sudan.
+        </p>
+
+    </div>
+
+    <div class="text-holder">
+
+        <ul>
+            <li>Structural and alteration mapping</li>
+            <li>Field reconnaissance and target generation</li>
+            <li>Chip sampling program design</li>
+            <li>Geological interpretation of mineralised structures</li>
+            <li>Gold anomaly delineation</li>
+        </ul>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+     PROJECT 2
+========================================================= -->
+
+<section class="section">
+
+    <h2>Bisha VMS District — Eritrea</h2>
+
+    <img src="images/bisha-project.jpg"
+         alt="Bisha VMS District"
+         class="responsive-img">
+
+    <div class="text-holder">
+
+        <p>
+            Technical involvement in the Bisha volcanogenic massive sulphide (VMS)
+            district from exploration drilling through geological modelling support.
+        </p>
+
+    </div>
+
+    <div class="text-holder">
+
+        <ul>
+            <li>Core logging and structural interpretation</li>
+            <li>Exploration drilling support</li>
+            <li>Geological database integration</li>
+            <li>Resource estimation support workflows</li>
+        </ul>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+     PROJECT 3
+========================================================= -->
+
+<section class="section">
+
+    <h2>Daero Paulos Porphyry Gold System — Eritrea</h2>
+
+    <img src="images/daero-project.jpg"
+         alt="Daero Paulos Porphyry System"
+         class="responsive-img">
+
+    <div class="text-holder">
+
+        <p>
+            Structural mapping and geological interpretation within
+            the Asmara Belt targeting porphyry-style mineralisation systems.
+        </p>
+
+    </div>
+
+    <div class="text-holder">
+
+        <ul>
+            <li>Structural geology interpretation</li>
+            <li>Alteration mapping</li>
+            <li>Core logging and target evaluation</li>
+            <li>Geological model support</li>
+        </ul>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+     PROJECT 4
+========================================================= -->
+
+<section class="section">
+
+    <h2>ASGM Evaluation — Sierra Leone</h2>
+
+    <img src="images/asgm-project.jpg"
+         alt="ASGM Assessment"
+         class="responsive-img">
+
+    <div class="text-holder">
+
+        <p>
+            Technical assessment of artisanal and small-scale gold mining (ASGM)
+            operations focused on geological controls, mineralisation style,
+            and field-scale evaluation.
+        </p>
+
+    </div>
+
+    <div class="text-holder">
+
+        <ul>
+            <li>Field evaluation of artisanal workings</li>
+            <li>Geological assessment of mineralised zones</li>
+            <li>Structural interpretation</li>
+            <li>Regional exploration potential review</li>
+        </ul>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+
+<section class="section">
+
+    <h2>Technical Collaboration</h2>
+
+    <div class="text-holder">
+
+        <p>
+            Ubuntu Geoscience supports exploration teams,
+            investors, and mining companies requiring
+            field-grounded geological interpretation and
+            integrated exploration workflows.
+        </p>
+
+    </div>
+
+    <div style="text-align:center; margin-top:30px;">
+
+        <a href="contact.html" class="cta-button">
+            Discuss a Project
+        </a>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+    © Ubuntu Geoscience. All rights reserved.
+</footer>
+
+<button id="backToTop" title="Back to top">↑</button>
+
+<script src="script.js"></script>
+
 </body>
 </html>
