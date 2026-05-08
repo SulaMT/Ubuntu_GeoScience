@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ubuntu Geoscience Report Template</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* ==========================================================================
+   UBUNTU GEOSCIENCE — REPORT TEMPLATE
+   ========================================================================== */
+
+:root {
+    --bg-dark: #0a192f;
+    --bg-card: #112240;
+    --accent-cyan: #00d4ff;
+    --accent-gold: #D4AF37;
+    --text-main: #ccd6f6;
+    --text-soft: #a8b2d1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.8;
+}
+
+/* ==========================================================================
+   COVER PAGE
+   ========================================================================== */
+
+.cover-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 60px;
+}
+
+.logo {
+    width: 110px;
+    margin-bottom: 25px;
+}
+
+.company-name {
+    font-size: 22px;
+    letter-spacing: 3px;
+    color: var(--accent-cyan);
+    margin-bottom: 30px;
+}
+
+.divider {
+    width: 60%;
+    height: 1px;
+    background: rgba(0,212,255,0.25);
+    margin: 25px 0;
+}
+
+.report-title {
+    font-size: 42px;
+    color: var(--accent-gold);
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.report-subtitle {
+    font-size: 18px;
+    color: var(--text-soft);
+}
+
+.cover-info {
+    margin-top: 25px;
+    font-size: 15px;
+    line-height: 2;
+}
+
+.cover-info span {
+    color: var(--accent-gold);
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   CONTENT WRAPPER
+   ========================================================================== */
+
+.report-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 80px 30px;
+}
+
+/* ==========================================================================
+   SECTION STYLES
+   ========================================================================== */
+
+.section {
+    margin-bottom: 80px;
+}
+
+.section-title {
+    font-size: 34px;
+    color: var(--accent-cyan);
+    margin-bottom: 20px;
+}
+
+.section-subtitle {
+    font-size: 18px;
+    color: var(--text-soft);
+    margin-bottom: 35px;
+}
+
+/* ==========================================================================
+   INTERPRETATION BOX
+   ========================================================================== */
+
+.interpretation-box {
+    background: var(--bg-card);
+    border-left: 4px solid var(--accent-gold);
+
+    padding: 25px;
+    margin: 30px 0;
+
+    border-radius: 8px;
+}
+
+.interpretation-box h3 {
+    color: var(--accent-gold);
+    margin-bottom: 12px;
+}
+
+.interpretation-box p {
+    color: var(--text-main);
+}
+
+/* ==========================================================================
+   FIGURE SYSTEM
+   ========================================================================== */
+
+.figure {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.figure img {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.figure-caption {
+    margin-top: 12px;
+    color: var(--text-soft);
+    font-size: 14px;
+    font-style: italic;
+}
+
+/* ==========================================================================
+   TABLE STYLING
+   ========================================================================== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 35px 0;
+}
+
+th {
+    background: rgba(212,175,55,0.12);
+    color: var(--accent-gold);
+    padding: 14px;
+    text-align: left;
+}
+
+td {
+    padding: 14px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    color: var(--text-main);
+}
+
+/* ==========================================================================
+   RECOMMENDATION BOX
+   ========================================================================== */
+
+.recommendation-box {
+    background: rgba(0,212,255,0.06);
+
+    border-left: 4px solid var(--accent-cyan);
+
+    padding: 25px;
+    margin-top: 30px;
+
+    border-radius: 8px;
+}
+
+.recommendation-box h3 {
+    color: var(--accent-cyan);
+    margin-bottom: 12px;
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--text-soft);
+    font-size: 13px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ==========================================================================
+     COVER PAGE
+     ========================================================================== -->
+
+<section class="cover-page">
+
+    <img src="images/favicon-32.png" alt="Ubuntu Geoscience Logo" class="logo">
+
+    <div class="company-name">
+        UBUNTU GEOSCIENCE
+    </div>
+
+    <div class="divider"></div>
+
+    <h1 class="report-title">
+        GEOLOGICAL EXPLORATION REPORT
+    </h1>
+
+    <p class="report-subtitle">
+        Arabian-Nubian Shield Mineral Systems
+    </p>
+
+    <div class="divider"></div>
+
+    <div class="cover-info">
+        <p><span>Project:</span> Wadi Dom Prospect</p>
+        <p><span>Location:</span> Sudan</p>
+        <p><span>Stage:</span> Target Generation</p>
+        <p><span>Client:</span> Confidential</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="cover-info">
+        <p>Prepared by Ubuntu Geoscience</p>
+        <p>May 2026</p>
+    </div>
+
+</section>
+
+<!-- ==========================================================================
+     REPORT CONTENT
+     ========================================================================== -->
+
+<div class="report-container">
+
+    <!-- EXECUTIVE SUMMARY -->
+    <section class="section">
+
+        <h2 class="section-title">
+            Executive Summary
+        </h2>
+
+        <p class="section-subtitle">
+            Overview of exploration objectives, geological findings, and target generation outcomes.
+        </p>
+
+        <p>
+            Geological mapping, alteration analysis, and geochemical integration
+            identified structurally controlled gold mineralization associated with
+            NE-trending shear corridors.
+        </p>
+
+        <div class="interpretation-box">
+
+            <h3>Interpretation</h3>
+
+            <p>
+                Structural intersections between NE shear zones and lithological contacts
+                represent priority targets for follow-up trenching and drilling.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- GEOLOGY -->
+    <section class="section">
+
+        <h2 class="section-title">
+            Regional Geology
+        </h2>
+
+        <p class="section-subtitle">
+            Arabian-Nubian Shield geological framework.
+        </p>
+
+        <p>
+            The project area is situated within juvenile Neoproterozoic crust
+            characterized by volcanic arc assemblages, granitoid intrusions,
+            and regional shear deformation.
+        </p>
+
+        <!-- FIGURE -->
+        <div class="figure">
+
+            <img src="images/placeholder-map.jpg" alt="Regional geology map">
+
+            <div class="figure-caption">
+                Figure 1. Regional geological interpretation and structural framework.
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- SAMPLE TABLE -->
+    <section class="section">
+
+        <h2 class="section-title">
+            Geochemical Results
+        </h2>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Sample ID</th>
+                    <th>Au (ppm)</th>
+                    <th>Rock Type</th>
+                    <th>Comments</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>WD-001</td>
+                    <td>1.25</td>
+                    <td>Quartz Vein</td>
+                    <td>Strong oxidation</td>
+                </tr>
+
+                <tr>
+                    <td>WD-002</td>
+                    <td>0.84</td>
+                    <td>Sheared Volcanic</td>
+                    <td>Sericite alteration</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+    <!-- RECOMMENDATIONS -->
+    <section class="section">
+
+        <h2 class="section-title">
+            Recommendations
+        </h2>
+
+        <div class="recommendation-box">
+
+            <h3>Next Exploration Phase</h3>
+
+            <p>
+                Detailed structural mapping and trenching are recommended along
+                NE-trending shear corridors where coincident geochemical anomalies
+                and quartz-sericite alteration suggest fluid-focused mineralization.
+            </p>
+
+        </div>
+
+    </section>
+
+</div>
+
+<!-- ==========================================================================
+     FOOTER
+     ========================================================================== -->
+
+<footer>
+    © Ubuntu Geoscience — Geological Consultancy & Mineral Exploration
+</footer>
+
+</body>
+</html>
