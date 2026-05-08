@@ -5,80 +5,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services | Ubuntu Geoscience</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
+
 <body>
 
-    <header class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="images/logo-landscape-contact.png" alt="Ubuntu Geoscience Logo" class="logo_portrait">
-                </a>
-            </div>
-            <nav>
-                <input type="checkbox" id="nav-toggle" class="nav-toggle">
-                <label for="nav-toggle" class="hamburger">
-                    <span></span><span></span><span></span>
-                </label>
-                <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html" class="active-link">Services</a></li>
-                    <li><a href="projects.html">Projects Completed</a></li> 
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main class="container">
-        <!-- Centered placer for the title and tagline (same as About page) -->
-        <div class="hero-placer" style="text-align: center; background: rgba(0, 212, 255, 0.05); border-radius: 12px; padding: 30px 20px; margin: 20px 0; border: 1px solid rgba(0, 212, 255, 0.2);">
-            <h1 style="color: var(--accent-cyan, #00d4ff); font-size: 2rem; margin-bottom: 10px;">Our Services</h1>
-            <p class="bridge-tagline" style="font-size: 1.2rem; font-style: italic; color: var(--text-main, #ccd6f6);">Technical solutions for every stage of mineral exploration</p>
+<header class="navbar">
+    <div class="nav-container">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo-landscape-contact.png" class="logo_portrait" alt="Ubuntu Geoscience">
+            </a>
         </div>
 
-        <!-- Image below the placer -->
-        <img src="images/core-logging-placeholder.jpg" alt="Geologist logging drill core" class="responsive-img" onerror="this.src='https://placehold.co/1200x300?text=Core+Logging'">
+        <nav>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="hamburger">
+                <span></span><span></span><span></span>
+            </label>
 
-        <div class="services-grid">
-            <div class="service-card">
-                <h3>Field Exploration & Geological Mapping</h3>
-                <div class="text-holder">
-                    <p>Detailed structural and lithological mapping in complex Precambrian terrains. We generate high‑confidence prospectivity models and drill targets.</p>
-                </div>
-            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a class="active-link" href="services.html">Services</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-            <div class="service-card">
-                <h3>Mineral Exploration Project Management</h3>
-                <div class="text-holder">
-                    <p>End‑to‑end leadership: program design, contractor supervision, QAQC, data validation, and resource estimation. We de‑risk your investment.</p>
-                </div>
-            </div>
+<main>
 
-            <div class="service-card">
-                <h3>Geological Data Integration</h3>
-                <div class="text-holder">
-                    <p>Merge geochemistry, geophysics, structural, and alteration data into coherent 3D models. Actionable insights, not spreadsheets.</p>
-                </div>
-            </div>
+<!-- HERO -->
+<section class="hero">
+    <h1>Exploration Services</h1>
+    <p class="hero-subtitle">
+        Integrated geological solutions across the mineral exploration lifecycle
+    </p>
+</section>
 
-            <div class="service-card">
-                <h3>Geospatial Analysis & GIS</h3>
-                <div class="text-holder">
-                    <p>Precision mapping, remote sensing, and spatial analysis using QGIS and ArcGIS. From grassroots to mine‑scale.</p>
-                </div>
-            </div>
-        </div>
-    </main>
+<!-- IMAGE -->
+<section class="section">
+    <img src="images/core-logging-placeholder.jpg"
+         class="responsive-img"
+         alt="Geological core logging">
+</section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; Ubuntu Geoscience.</p>
-        </div>
-    </footer>
-    <button id="backToTop" title="Go to top">↑</button>
-    <script src="script.js"></script>
+<!-- INTRO -->
+<section class="section">
+
+    <div class="text-holder">
+        <p>
+            Ubuntu Geoscience provides integrated geological expertise across all stages of mineral exploration,
+            from early reconnaissance through to resource definition. The focus is on reducing geological uncertainty
+            and converting field data into actionable exploration targets.
+        </p>
+    </div>
+
+</section>
+
+<!-- EXPLORATION LIFECYCLE -->
+<section class="section">
+
+    <h2>Exploration Workflow</h2>
+
+    <div class="text-holder">
+        <p><strong>1. Reconnaissance Exploration</strong></p>
+        <p>Regional-scale geological assessment, lithological mapping, and structural framework interpretation in underexplored terrains.</p>
+    </div>
+
+    <div class="text-holder">
+        <p><strong>2. Target Generation</strong></p>
+        <p>Integration of structural geology, geochemistry, and remote sensing to define high-priority drill targets.</p>
+    </div>
+
+    <div class="text-holder">
+        <p><strong>3. Drilling Support</strong></p>
+        <p>Core logging, structural interpretation, and QAQC support to ensure geological integrity during drilling campaigns.</p>
+    </div>
+
+    <div class="text-holder">
+        <p><strong>4. Resource Definition Support</strong></p>
+        <p>Geological modelling inputs, domain definition, and data validation for resource estimation workflows.</p>
+    </div>
+
+</section>
+
+<!-- TECHNICAL CAPABILITIES -->
+<section class="section">
+
+    <h2>Core Technical Capabilities</h2>
+
+    <div class="text-holder">
+        <ul>
+            <li>Structural geology and deformation analysis</li>
+            <li>Geological mapping in Precambrian terranes</li>
+            <li>Geochemical interpretation and anomaly targeting</li>
+            <li>GIS and remote sensing (QGIS / ArcGIS)</li>
+            <li>3D geological data integration</li>
+        </ul>
+    </div>
+
+</section>
+
+</main>
+
+<footer>
+    © Ubuntu Geoscience. All rights reserved.
+</footer>
+
 </body>
 </html>
