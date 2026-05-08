@@ -32,3 +32,17 @@ if (backBtn) {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 }
+
+/* ==========================================================================
+   NAVBAR SCROLL EFFECT
+   ========================================================================== */
+
+const navbar = document.querySelector('.navbar');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 40) {
+        navbar.classList.add('navbar-scrolled');
+    } else {
+        navbar.classList.remove('navbar-scrolled');
+    }
+});
