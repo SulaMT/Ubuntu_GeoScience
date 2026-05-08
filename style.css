@@ -284,3 +284,8 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+.navbar-scrolled {
+    background: rgba(10, 25, 47, 0.98);
+    box-shadow: 0 5px 25px rgba(0,0,0,0.35);
+}
