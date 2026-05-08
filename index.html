@@ -3,109 +3,237 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ubuntu GeoScience - Mineral Exploration Consultancy in Arabian-Nubian Shield, Africa and MENA Region">
- <title>Ubuntu Geoscience | Data-driven Mineral Exploration</title>
+
+    <meta name="description"
+          content="Ubuntu Geoscience — Mineral exploration consultancy focused on the Arabian-Nubian Shield, East Africa, and frontier exploration terrains.">
+
+    <title>Ubuntu Geoscience | Mineral Exploration Consultancy</title>
+
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-   <link rel="icon" type="image/png" href="images/favicon.png?v=3">
 
-    <style>
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-        }
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
 
-        body {
-            padding-top: 70px;
-        }
-    </style>
+    <link rel="icon"
+          type="image/png"
+          href="images/favicon.png?v=3">
 </head>
+
 <body>
 
-    <header class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="images/logo-landscape-contact.png" alt="Ubuntu Geoscience Logo" class="logo_portrait">
-                </a>
-            </div>
-            <nav>
-                <input type="checkbox" id="nav-toggle" class="nav-toggle">
-                <label for="nav-toggle" class="hamburger">
-                    <span></span><span></span><span></span>
-                </label>
-                <ul class="nav-menu">
-                    <li><a href="index.html" class="active-link">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="projects.html">Projects Completed</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
 
-    <section id="about" class="section" style="padding-top: 40px;">
-        <div class="container">
-            <h2 class="section-title" style="text-align: center; color: var(--accent-cyan, #00d4ff); margin-bottom: 30px;">Ubuntu Geoscience</h2>
-            <div class="about-scroll-container">
-                <div class="about-grid">
-                    <div class="about-box">
-                        <h3> Exploration Expertise</h3>
-                        <p>Founded by a senior geologist, a professional with close 20 years of mineral exploration experience in diverse mineral deposit systems across East (ANS) and West Africa (Man Shield).</p>
-                    </div>
-                    <div class="about-box">
-                        <h3>Our Philosophy</h3>
-                        <p>Ubuntu – "Integration." We bring together field geology and data from sat imagery , geochem and geophysics to turn prospects into discoveries.</p>
-                    </div>
-                    <div class="about-box">
-                        <h3>Technical Leadership</h3>
-                        <p>Your technical bridge in the Arabian‑Nubian Shield. We deliver practical, data‑driven solutions from grassroots to resource estimation.</p>
-                    </div>
-                    <div class="about-box">
-                        <h3>Proven Results</h3>
-                        <p>Key contributor to the Wadi Dom gold discovery and advancement of the Bisha VMS district. We don't just report – we discover.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<header class="navbar">
 
-    <main class="container">
-        <div class="services-grid">
-            <div class="card">
-                <h3>Geological Mapping</h3>
-                <p>From greenfield reconnaissance to deposit‑scale structural analysis. We map what others miss.</p>
-            </div>
-            <div class="card">
-                <h3>Target Generation</h3>
-                <p>GIS‑based integration of geochemistry, geophysics, and field data to deliver drill‑ready targets.</p>
-            </div>
-            <div class="card">
-                <h3>Project Management</h3>
-                <p>Full‑cycle exploration leadership – from program design to QAQC, core logging, and resource estimation.</p>
-            </div>
-        </div>
-    </main>
+    <div class="nav-container">
 
-    <section class="experience-teaser section">
-        <div class="container" style="text-align: center;">
-            <h2>Proven Discovery Track Record</h2>
-            <p>From the Asmara Belt to the Nubian Shield, Ubuntu GeoScience delivers results grounded in field reality.</p>
-            <a href="projects.html" class="cta-button">View Completed Projects</a>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo-landscape-contact.png"
+                     alt="Ubuntu Geoscience"
+                     class="logo_portrait">
+            </a>
         </div>
-    </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; Ubuntu Geoscience</p>
+        <nav>
+
+            <input type="checkbox"
+                   id="nav-toggle"
+                   class="nav-toggle">
+
+            <label for="nav-toggle"
+                   class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active-link">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+        </nav>
+
+    </div>
+
+</header>
+
+<!-- =========================================================
+     HERO SECTION
+========================================================= -->
+
+<section class="hero">
+
+    <h1>
+        Mineral Exploration Across the Arabian-Nubian Shield
+    </h1>
+
+    <p class="hero-subtitle">
+        Field-driven geological consultancy integrating structural geology,
+        geochemistry, geophysics, and GIS for discovery-focused exploration.
+    </p>
+
+</section>
+
+<!-- =========================================================
+     HERO IMAGE
+========================================================= -->
+
+<section class="section">
+
+    <img src="images/field-geology.png"
+         alt="Field geology mapping"
+         class="responsive-img">
+
+</section>
+
+<!-- =========================================================
+     ABOUT PREVIEW
+========================================================= -->
+
+<section class="section">
+
+    <h2>Technical Exploration Consultancy</h2>
+
+    <div class="text-holder">
+
+        <p>
+            Ubuntu Geoscience delivers integrated mineral exploration services
+            across East Africa, the Arabian-Nubian Shield, and frontier terrains.
+            The consultancy combines field geology, structural interpretation,
+            GIS integration, and exploration management to advance projects
+            from reconnaissance through drill targeting and resource definition.
+        </p>
+
+    </div>
+
+    <div class="text-holder">
+
+        <p>
+            Experience includes gold, VMS, and porphyry systems across Sudan,
+            Eritrea, and West Africa, including contribution to the Galat Sufur South
+            orogenic gold discovery and technical work within the Bisha VMS district.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+     CORE CAPABILITIES
+========================================================= -->
+
+<section class="section">
+
+    <h2>Core Capabilities</h2>
+
+    <div class="services-grid">
+
+        <div class="card">
+            <h3>Geological Mapping</h3>
+
+            <p>
+                Reconnaissance to deposit-scale mapping focused on structural controls,
+                alteration systems, and mineralisation vectors.
+            </p>
         </div>
-    </footer>
 
-    <button id="backToTop" title="Go to top">↑</button>
-    <script src="script.js"></script>
+        <div class="card">
+            <h3>Target Generation</h3>
+
+            <p>
+                Integrated interpretation of geochemistry, geophysics,
+                remote sensing, and structural datasets to generate drill-ready targets.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Drilling & Resource Support</h3>
+
+            <p>
+                Core logging, geological modelling support,
+                QAQC workflows, and exploration data integration.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+     DISCOVERY TRACK RECORD
+========================================================= -->
+
+<section class="section">
+
+    <h2>Exploration Track Record</h2>
+
+    <div class="text-holder">
+
+        <p>
+            Ubuntu Geoscience applies field-first exploration methodology
+            grounded in geological observation and integrated interpretation.
+            Work spans the Asmara Belt, Nubian Shield, Ariab district,
+            and frontier exploration corridors across Africa and the MENA region.
+        </p>
+
+    </div>
+
+    <div style="text-align:center; margin-top:30px;">
+
+        <a href="projects.html" class="cta-button">
+            View Completed Projects
+        </a>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+     CONTACT CTA
+========================================================= -->
+
+<section class="section">
+
+    <h2>Project Enquiries</h2>
+
+    <div class="text-holder">
+
+        <p>
+            For exploration-stage projects, structural interpretation,
+            GIS integration, drilling support, or ASGM technical evaluation,
+            contact Ubuntu Geoscience directly.
+        </p>
+
+    </div>
+
+    <div style="text-align:center; margin-top:30px;">
+
+        <a href="contact.html" class="cta-button">
+            Contact Ubuntu Geoscience
+        </a>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+    © Ubuntu Geoscience. All rights reserved.
+</footer>
+
+<button id="backToTop" title="Back to top">↑</button>
+
+<script src="script.js"></script>
+
 </body>
 </html>
