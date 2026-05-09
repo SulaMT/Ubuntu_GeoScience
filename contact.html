@@ -9,9 +9,31 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css?v=1.2">
+    <link rel="stylesheet" href="style.css?v=1.5">
 </head>
 <body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html">
+                <img src="logo.png" alt="Ubuntu Geoscience" class="logo_portrait">
+            </a>
+            
+            <input type="checkbox" id="nav-check" class="nav-toggle" style="display:none;">
+            <label for="nav-check" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html" class="active-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
     <main class="contact-page">
         
@@ -59,8 +81,8 @@
                            ✉ info@ubuntugeoscience.com
                         </a>
                         
-                        <a href="tel:+966535567001">
-                           📞 +966 535 567 001 (SA)
+                        <a href="https://wa.me/966535567001" target="_blank">
+                           🟢 📞 +966 535 567 001 (SA)
                         </a>
                         
                         <a href="tel:+249912110469">
@@ -80,11 +102,15 @@
                 </div>
             </section>
 
-        </div> </main>
+        </div> 
+
+    </main>
 
     <footer>
-        <p>&copy; 2026 Ubuntu Geoscience. All rights reserved.</p>
+        <p>Ubuntu Geoscience. All rights reserved.</p>
     </footer>
+
+    <button id="backToTop" title="Go to top">↑</button>
 
 </body>
 </html>
