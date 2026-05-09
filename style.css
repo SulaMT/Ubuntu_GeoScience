@@ -369,6 +369,23 @@ footer {
         padding: 25px;
         display: none;
     }
+/* =========================================================
+   CUSTOM PAGE ELEMENTS
+========================================================= */
 
+.wide-hero {
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.wide-hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
     .nav-toggle:checked ~ .nav-menu { display: flex; }
 }
