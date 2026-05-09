@@ -1,6 +1,6 @@
 /* =========================================================
    UBUNTU GEOSCIENCE — MASTER STYLESHEET
-   Clean Production Version
+   Modified Production Version
 ========================================================= */
 
 /* =========================================================
@@ -8,7 +8,6 @@
 ========================================================= */
 
 :root {
-
     --accent-cyan: #00d4ff;
     --accent-gold: #d4af37;
 
@@ -23,8 +22,7 @@
 
     --radius: 10px;
 
-    --shadow:
-    0 10px 30px rgba(2, 12, 27, 0.35);
+    --shadow: 0 10px 30px rgba(2, 12, 27, 0.35);
 
     --transition: all 0.3s ease;
 }
@@ -44,15 +42,10 @@ html {
 }
 
 body {
-
     font-family: 'Inter', system-ui, sans-serif;
-
     background: var(--bg-dark);
-
     color: var(--text-main);
-
     line-height: 1.7;
-
     overflow-x: hidden;
 }
 
@@ -60,9 +53,7 @@ body {
    3. GLOBAL TYPOGRAPHY
 ========================================================= */
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
     font-weight: 600;
     line-height: 1.3;
 }
@@ -97,13 +88,9 @@ a {
 ========================================================= */
 
 .container {
-
     width: 100%;
-
     max-width: 1100px;
-
     margin: 0 auto;
-
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -117,61 +104,53 @@ a {
 ========================================================= */
 
 .navbar {
-
     position: fixed;
-
     top: 0;
     left: 0;
-
     width: 100%;
-
-    background:
-    rgba(10, 25, 47, 0.96);
-
+    background: rgba(10, 25, 47, 0.96);
     backdrop-filter: blur(10px);
-
     z-index: 1000;
-
     box-shadow: var(--shadow);
 }
 
 .nav-container {
-
-    height: 80px;
-
+    height: 90px; /* Increased to accommodate larger logo */
     max-width: 1200px;
-
     margin: 0 auto;
-
     padding: 0 20px;
-
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
 }
 
+.nav-logo-link {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    text-decoration: none;
+}
+
 .logo_portrait {
-    max-height: 45px;
+    height: 70px; /* Increased size adjustment */
     width: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.logo_portrait:hover {
+    transform: scale(1.1); /* Hover scale effect */
 }
 
 .nav-menu {
-
     display: flex;
-
     gap: 28px;
-
     list-style: none;
 }
 
 .nav-menu a {
-
     color: var(--text-muted);
-
     text-decoration: none;
-
     font-weight: 500;
 }
 
@@ -181,253 +160,116 @@ a {
 }
 
 /* MOBILE NAV */
-
-.nav-toggle {
-    display: none;
-}
-
-.hamburger {
-    display: none;
-}
+.nav-toggle { display: none; }
+.hamburger { display: none; }
 
 /* =========================================================
-   6. HERO
+   6. HERO & PLACER
 ========================================================= */
 
 .hero {
-
     padding-top: 150px;
-
     padding-bottom: 90px;
-
     text-align: center;
 }
 
-.hero h1 {
-    margin-bottom: 20px;
-}
+.hero h1 { margin-bottom: 20px; }
 
 .hero-subtitle {
-
     max-width: 850px;
-
     margin: 0 auto;
-
     color: var(--text-muted);
-
     font-size: 1.05rem;
 }
 
-/* =========================================================
-   7. HERO PLACER
-========================================================= */
-
 .hero-placer {
-
-    background:
-    rgba(17, 34, 64, 0.65);
-
-    border:
-    1px solid rgba(0, 212, 255, 0.12);
-
+    background: rgba(17, 34, 64, 0.65);
+    border: 1px solid rgba(0, 212, 255, 0.12);
     border-radius: 14px;
-
     padding: 40px 30px;
-
     margin-bottom: 35px;
-
     text-align: center;
-
     box-shadow: var(--shadow);
 }
 
-.hero-placer h1 {
-    margin-bottom: 12px;
-}
+.hero-placer h1 { margin-bottom: 12px; }
 
 .bridge-tagline {
-
     color: var(--text-muted);
-
     font-style: italic;
 }
 
 /* =========================================================
-   8. TEXT HOLDERS
+   8. TEXT HOLDERS (Push Forward Interaction)
 ========================================================= */
 
 .text-holder {
-
-    background:
-    rgba(17, 34, 64, 0.75);
-
-    border-left:
-    4px solid var(--accent-gold);
-
+    background: rgba(17, 34, 64, 0.75);
+    border-left: 4px solid var(--accent-gold);
     padding: 26px;
-
     border-radius: var(--radius);
-
     margin-bottom: 24px;
-
     box-shadow: var(--shadow);
+    transition: var(--transition); /* Transition for hover effect */
 }
 
-.text-holder p {
-    color: var(--text-main);
+.text-holder:hover {
+    transform: translateY(-5px) translateX(5px); /* Push forward/lift effect */
+    background: rgba(17, 34, 64, 0.9);
+    box-shadow: 0 15px 35px rgba(2, 12, 27, 0.5);
+    border-left-color: var(--accent-cyan);
 }
 
-.text-holder ul {
-    margin-top: 12px;
-    padding-left: 20px;
-}
-
-.text-holder li {
-    margin-bottom: 10px;
-}
+.text-holder p { color: var(--text-main); }
+.text-holder ul { margin-top: 12px; padding-left: 20px; }
+.text-holder li { margin-bottom: 10px; }
 
 /* =========================================================
-   9. ABOUT GRID
+   9. GRIDS (ABOUT & SERVICES)
 ========================================================= */
 
-.about-grid {
-
+.about-grid, .services-grid {
     display: grid;
-
-    grid-template-columns:
-    repeat(auto-fit, minmax(280px, 1fr));
-
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 24px;
 }
 
-.about-box {
-
+.about-box, .card, .service-card {
     background: var(--bg-card);
-
     padding: 28px;
-
     border-radius: var(--radius);
-
-    border:
-    1px solid var(--border);
-
+    border: 1px solid var(--border);
     box-shadow: var(--shadow);
-}
-
-.about-box h3 {
-    margin-bottom: 14px;
-}
-
-/* =========================================================
-   10. SERVICES GRID
-========================================================= */
-
-.services-grid {
-
-    display: grid;
-
-    grid-template-columns:
-    repeat(auto-fit, minmax(280px, 1fr));
-
-    gap: 24px;
-
-    margin-top: 35px;
-}
-
-.card,
-.service-card {
-
-    background: var(--bg-card);
-
-    border:
-    1px solid var(--border);
-
-    border-radius: var(--radius);
-
-    padding: 28px;
-
-    box-shadow: var(--shadow);
-
     transition: var(--transition);
 }
 
-.card:hover,
-.service-card:hover {
-
+.card:hover, .service-card:hover {
     transform: translateY(-5px);
-
     border-color: var(--accent-cyan);
 }
 
 /* =========================================================
-   11. EXPERIENCE TEASER
-========================================================= */
-
-.experience-teaser {
-
-    background:
-    linear-gradient(
-        180deg,
-        #0f2744 0%,
-        #112240 100%
-    );
-
-    text-align: center;
-}
-
-.experience-teaser p {
-
-    max-width: 700px;
-
-    margin: 0 auto;
-}
-
-/* =========================================================
-   12. BUTTONS
+   11. BUTTONS & IMAGES
 ========================================================= */
 
 .cta-button {
-
     display: inline-block;
-
     margin-top: 30px;
-
     padding: 14px 28px;
-
-    border:
-    1px solid var(--accent-cyan);
-
+    border: 1px solid var(--accent-cyan);
     border-radius: 6px;
-
     color: var(--accent-cyan);
-
     text-decoration: none;
-
     font-weight: 600;
-
-    transition: var(--transition);
 }
 
-.cta-button:hover {
-
-    background:
-    rgba(0, 212, 255, 0.1);
-}
-
-/* =========================================================
-   13. IMAGES
-========================================================= */
+.cta-button:hover { background: rgba(0, 212, 255, 0.1); }
 
 .responsive-img {
-
     width: 100%;
-
     height: auto;
-
     border-radius: var(--radius);
-
     margin: 25px 0;
-
     box-shadow: var(--shadow);
 }
 
@@ -436,111 +278,60 @@ a {
 ========================================================= */
 
 .contact-page {
-
     min-height: 100vh;
-
     padding-top: 130px;
-
     padding-bottom: 80px;
 }
 
 .contact-intro {
-
     max-width: 850px;
-
     margin: 0 auto 50px auto;
-
     text-align: center;
-}
-
-.contact-intro p {
-
-    color: var(--text-muted);
-
-    margin-top: 15px;
 }
 
 .direct-contact-box {
-
-    background:
-    rgba(17, 34, 64, 0.75);
-
-    border:
-    1px solid var(--border);
-
+    background: rgba(17, 34, 64, 0.75);
+    border: 1px solid var(--border);
     border-radius: var(--radius);
-
     padding: 30px;
-
     max-width: 850px;
-
     margin: 0 auto;
-
     text-align: center;
-
     box-shadow: var(--shadow);
 }
 
-.direct-contact-links {
-    margin-top: 20px;
-}
-
 .direct-contact-links a {
-
     display: block;
-
     margin: 12px 0;
-
     color: var(--accent-cyan);
-
     text-decoration: none;
 }
 
-.direct-contact-links a:hover {
-    color: white;
-}
+.direct-contact-links a:hover { color: white; }
 
 /* =========================================================
-   15. FOOTER
+   15. FOOTER & UI
 ========================================================= */
 
 footer {
-
     text-align: center;
-
     padding: 35px 20px;
-
     color: var(--text-muted);
-
     font-size: 0.8rem;
 }
 
-/* =========================================================
-   16. BACK TO TOP
-========================================================= */
-
 #backToTop {
-
     position: fixed;
-
     bottom: 25px;
     right: 25px;
-
     width: 48px;
     height: 48px;
-
     border: none;
-
     border-radius: 50%;
-
     background: var(--accent-cyan);
-
     color: var(--bg-dark);
-
     cursor: pointer;
-
     display: none;
-
     z-index: 999;
 }
 
@@ -549,82 +340,35 @@ footer {
 ========================================================= */
 
 @media (max-width: 768px) {
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    h2 {
-        font-size: 1.5rem;
-    }
-
-    .hero {
-        padding-top: 120px;
-        padding-bottom: 70px;
-    }
-
-    .nav-container {
-        height: 70px;
-    }
-
-    .logo_portrait {
-        max-height: 38px;
-    }
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; }
+    
+    .nav-container { height: 70px; }
+    .logo_portrait { height: 50px; }
 
     .hamburger {
-
         display: flex;
-
         flex-direction: column;
-
         gap: 5px;
-
         cursor: pointer;
     }
 
     .hamburger span {
-
         width: 24px;
         height: 3px;
-
         background: var(--accent-cyan);
     }
 
     .nav-menu {
-
         position: absolute;
-
         top: 70px;
         left: 0;
-
         width: 100%;
-
         background: var(--bg-card);
-
         flex-direction: column;
-
         padding: 25px;
-
         display: none;
     }
 
-    .nav-toggle:checked ~ .nav-menu {
-        display: flex;
-    }
-
-    .section {
-        padding: 60px 0;
-    }
-
-    .hero-placer {
-        padding: 30px 20px;
-    }
-
-    .text-holder,
-    .card,
-    .service-card,
-    .about-box,
-    .direct-contact-box {
-        padding: 22px;
-    }
+    .nav-toggle:checked ~ .nav-menu { display: flex; }
 }
