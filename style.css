@@ -88,7 +88,7 @@ body {
    3. HERO SECTION
    ========================================================================== */
 .header-wrapper {
-    padding-top: calc(var(--navbar-height) + 60px);
+    padding-top: calc(var(--navbar-height) + 25px);
     padding-bottom: 60px;
     text-align: center;
 }
@@ -107,12 +107,10 @@ body {
 }
 
 .text-section h1 {
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    line-height: 1.1;
+    font-size: 3rem;
     color: white;
     margin-bottom: 20px;
 }
-
 .partner-slogan {
     font-size: 1.15rem;
     line-height: 1.7;
@@ -360,7 +358,50 @@ footer {
    9. RESPONSIVE DESIGN
    ========================================================================== */
 @media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        background: var(--bg-card);
+    }
 
+    .nav-toggle:checked ~ .nav-menu {
+        display: flex;
+    }
+
+    .text-section h1 {
+        font-size: 2rem;
+    }
+
+    .section,
+    .experience-teaser,
+    .container:first-of-type {
+        padding-top: calc(var(--navbar-height) + 60px);
+    }
+
+    .about-box {
+        flex: 1 1 100%;
+    }
+
+    /* Add this line – no new @media, just the rule */
+    .logo_layout {
+        max-width: 90%;
+    }
+}
+/* Hamburger menu icon */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--accent-cyan);
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
     .hamburger {
         display: flex;
     }
@@ -383,30 +424,54 @@ footer {
         transform: translateX(0);
         display: flex;
     }
-
-    .text-section h1 {
-        font-size: 2.3rem;
-        line-height: 1.15;
+    
+    .nav-toggle {
+        display: none;
     }
+}
 
-    .partner-slogan {
-        font-size: 1rem;
-    }
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;  /* full viewport height */
+}
 
-    .section,
-    .experience-teaser,
-    .container:first-of-type {
-        padding-top: calc(var(--navbar-height) + 60px);
-    }
+main, .section, .container, .experience-teaser {
+    flex: 1;  /* pushes footer down */
+}
 
-    .about-box {
-        flex: 1 1 100%;
-    }
+footer {
+    margin-top: auto;   /* forces footer to bottom */
+    padding: 20px;      /* slightly reduced */
+    text-align: center;
+    color: #8892b0;
+    font-size: 0.75rem; /* smaller than before */
+}
 
-    .logo_layout {
-        max-width: 90%;
-    }
+/* ====================== LOGO SIZES ====================== */
 
+/* Navbar Logo - Bigger */
+.logo img,
+.logo_portrait {
+    max-height: 58px;
+    width: auto;
+    display: block;
+}
+
+/* Contact Page Logo - Smaller */
+.logo_portrait_contact {
+    
+   /* Replace or update the existing .logo_portrait_contact rule */
+.logo_portrait_contact {
+    max-width: 220px;        /* desired max size */
+    width: 100%;             /* allows scaling down */
+    height: auto;
+    display: block;
+    margin: 0 auto 35px;
+}
+
+/* Mobile adjustment */
+@media (max-width: 768px) {
     .logo img,
     .logo_portrait {
         max-height: 50px;
@@ -415,21 +480,4 @@ footer {
     .logo_portrait_contact {
         max-width: 200px;
     }
-}
-
-/* ==========================================================================
-   10. HAMBURGER MENU ICON
-   ========================================================================== */
-.hamburger {
-    display: none;
-    cursor: pointer;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.hamburger span {
-    width: 25px;
-    height: 3px;
-    background-color: var(--accent-cyan);
-    transition: all 0.3s ease;
 }

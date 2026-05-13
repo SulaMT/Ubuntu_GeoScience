@@ -3,75 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Ubuntu GeoScience</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Contact | Ubuntu Geoscience</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css?v=1.6">
 </head>
 <body>
 
-    <!-- FULL NAVBAR (includes Home link) -->
-    <header class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <a href="index.html">
-              <img src="images/logo-landscape-contact.png" 
-     alt="Ubuntu Geoscience Logo" 
-     class="logo_portrait_contact">
-                </a>
-            </div>
-            <nav>
-                <input type="checkbox" id="nav-toggle" class="nav-toggle">
-                <label for="nav-toggle" class="hamburger">
-                    <span></span><span></span><span></span>
-                </label>
-                <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="projects.html">Experience</a></li> 
-                    <li><a href="contact.html" class="active-link">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <nav class="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="nav-logo-link">
+            <img src="images/logo-lanscape-contact.png" class="logo_portrait" alt="Ubuntu Geoscience">
+        </a> <!-- Properly closed the anchor tag -->
 
-    <!-- Contact Section with centered layout -->
-    <section id="contact" class="section">
-        <div class="contact-container">
-            <!-- Your custom contact logo -->
-            <div class="contact-logo">
-              <img src="./images/logo-landscape-contact.png" alt="Ubuntu Geoscience Logo">
+        <input type="checkbox" id="nav-check" class="nav-toggle" style="display:none;">
+        <label for="nav-check" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
 
-            <!-- Email and Telephone (centered, below logo) -->
-            <div class="contact-details-center">
-                <div class="contact-item">
-                    <h3>Direct Inquiries</h3>
-                    <p><i class="fa-solid fa-envelope"></i> <a href="mailto:info@ubuntugeoscience.com">info@ubuntugeoscience.com</a></p>
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html" class="active-link">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+    <main class="contact-page">
+        
+        <section class="contact-hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <p class="hero-tag">
+            Technical Mineral Exploration Support
+        </p>
+
+        <h1>
+     GEOSPATIAL & EXPLORATION ANALYTICS
+        </h1>
+
+        <p class="hero-subtext">
+         Data-driven geological interpretation, target generation, drilling support, and geospatial workflows for mineral exploration.
+        </p>
+
+    
+
+    </div>
+
+</section>
+
+            <section class="section">
+                <h2>Exploration Lifecycle Support</h2>
+
+                <div class="text-holder">
+                    <h3>1. Reconnaissance Stage</h3>
+                    <p>Regional-scale geological assessment, terrain evaluation, and early-stage prospectivity screening.</p>
                 </div>
-                <div class="contact-item">
-                    <h3>Telephone</h3>
-                    <p><i class="fa-solid fa-phone"></i> <a href="tel:+966535567001">+966 535 567 001</a></p>
+
+                <div class="text-holder">
+                    <h3>2. Target Generation Stage</h3>
+                    <p>Integration of field mapping, geochemistry, geophysics, and structural interpretation to define drill targets.</p>
                 </div>
-            </div>
 
-            <!-- Small centered footer text -->
-            <div class="contact-footer-text">
-                
-            </div>
-        </div>
-    </section>
+                <div class="text-holder">
+                    <h3>3. Drilling Stage</h3>
+                   <h3>3. Drilling Stage</h3>
+<p>Geological supervision, core logging, oriented core measurements, structural interpretation, and QAQC support during drilling campaigns.</p>
+                </div>
 
-    <!-- FULL FOOTER -->
+                <div class="text-holder">
+                    <h3>4. Resource Definition Stage</h3>
+                    <p>Geological modelling input, structural controls analysis, and support for resource estimation workflows.</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="direct-contact-box">
+                    <h2>Direct Contact</h2>
+                    <p style="margin-bottom: 20px;"><strong>Technical Enquiries Only</strong></p>
+
+                    <div class="direct-contact-links">
+                        <a href="mailto:info@ubuntugeoscience.com" style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 15px;">
+                           <span>✉</span> info@ubuntugeoscience.com
+                        </a>
+                        
+                        <a href="https://wa.me/966535567001" target="_blank" style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 15px;">
+                           <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 18px; height: 18px;">
+                           <span>+966 535 567 001 (SA)</span>
+                        </a>
+                        
+                        <a href="tel:+249912110469" style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+                           <span>📞</span> +249 912 110 469 (SD)
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="text-holder">
+                    <p>
+                        We prioritize technically grounded exploration projects where 
+                        geological understanding drives decision-making from fieldwork 
+                                            through to discovery.
+                    </p>
+                </div>
+            </section>
+
+        </div> 
+    </main>
+
     <footer>
-        <div class="container">
-            <p>&copy; ©Ubuntu Geoscience. Field-based and Data-Driven Exploration Approach.</p>
-        </div>
+        <p>Ubuntu Geoscience. All rights reserved.</p>
     </footer>
 
-    <!-- Back to Top Button -->
     <button id="backToTop" title="Go to top">↑</button>
 
-    <script src="script.js"></script>
 </body>
 </html>

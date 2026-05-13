@@ -3,79 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | Ubuntu GeoScience</title>
+    <title>Services | Ubuntu Geoscience</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Favicon -->
-<link rel="icon" type="image/png" href="images/favicon.png">
 </head>
+
 <body>
 
-   <header class="navbar">
+<header class="navbar">
     <div class="nav-container">
-        <!-- Professional Logo Image -->
         <div class="logo">
             <a href="index.html">
-               <img src="images/logo-landscape-contact.png" 
-     alt="Ubuntu Geoscience Logo" 
-     class="logo_portrait_contact">
+                <img src="images/logo-lanscape-contact.png" class="logo_portrait" alt="Ubuntu Geoscience">
             </a>
         </div>
 
         <nav>
             <input type="checkbox" id="nav-toggle" class="nav-toggle">
             <label for="nav-toggle" class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </label>
 
             <ul class="nav-menu">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active-link">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="projects.html">Experience</a></li> 
+                <li><a href="about.html">About</a></li>
+                <li><a class="active-link" href="services.html">Services</a></li>
+                <li><a href="projects.html">Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </div>
 </header>
 
-    <main class="container">
-        <section class="services-header">
-            <h1>Our Services</h1>
-            <p class="bridge-tagline">Ubuntu: your technical bridge to discovery in the Arabian-Nubian Shield</p>
-        </section>
+<main>
 
-        <div class="services-grid">
-            <div class="service-card">
-                <h3>Field Exploration & Geological Mapping</h3>
-                <p>Expert geological mapping, structural analysis, and prospect generation in complex Precambrian terrains.</p>
-            </div>
+<!-- HERO -->
+<section class="hero">
+    <h1>Exploration Services</h1>
+    <p class="hero-subtitle">
+        Integrated geological solutions across the mineral exploration lifecycle
+    </p>
+</section>
 
-            <div class="service-card">
-                <h3>Mineral Exploration Project Management</h3>
-                <p>End-to-end leadership of exploration programs — from target generation through drilling to resource estimation.</p>
-            </div>
+<!-- IMAGE -->
+<section class="section">
+    <img src="images/core-logging-placeholder.jpg"
+         class="responsive-img"
+         alt="Geological core logging">
+</section>
 
-            <div class="service-card">
-                <h3>Geological Data Integration</h3>
-                <p>Merging field observations, geochemical, geophysical, and structural data into coherent, actionable geological models.</p>
-            </div>
+<!-- INTRO -->
+<section class="section">
 
-            <div class="service-card">
-                <h3>Geospatial Analysis & GIS</h3>
-                <p>Precision mapping and spatial analysis to support field-based exploration decisions.</p>
-            </div>
-        </div>
-    </main>
-<button id="backToTop" title="Go to top">↑</button>
-<footer>
-    <div class="container">
-        <p>©Ubuntu Geoscience. Field-based and Data-Driven Exploration Approach.</p>
+    <div class="text-holder">
+        <p>
+            Ubuntu Geoscience provides integrated geological expertise across all stages of mineral exploration,
+            from early reconnaissance through to resource definition. The focus is on reducing geological uncertainty
+            and converting field data into actionable exploration targets.
+        </p>
     </div>
+
+</section>
+
+<!-- EXPLORATION LIFECYCLE -->
+<section class="section">
+
+    <h2>Exploration Workflow</h2>
+
+    <div class="text-holder">
+        <p><strong>1. Reconnaissance Exploration</strong></p>
+        <p>Regional-scale geological assessment, lithological mapping, and structural framework interpretation in underexplored terrains.</p>
+    </div>
+
+    <div class="text-holder">
+        <p><strong>2. Target Generation</strong></p>
+        <p>Integration of structural geology, geochemistry, and remote sensing to define high-priority drill targets.</p>
+    </div>
+
+    <div class="text-holder">
+        <p><strong>3. Drilling Support</strong></p>
+        <p>Core logging, structural interpretation, and QAQC support to ensure geological integrity during drilling campaigns.</p>
+    </div>
+
+    <div class="text-holder">
+        <p><strong>4. Resource Definition Support</strong></p>
+        <p>Geological modelling inputs, domain definition, and data validation for resource estimation workflows.</p>
+    </div>
+
+</section>
+
+<!-- TECHNICAL CAPABILITIES -->
+<section class="section">
+
+    <h2>Core Technical Capabilities</h2>
+
+    <div class="text-holder">
+        <ul>
+            <li>Structural geology and deformation analysis</li>
+            <li>Geological mapping in Precambrian terranes</li>
+            <li>Geochemical interpretation and anomaly targeting</li>
+            <li>GIS and remote sensing (QGIS / ArcGIS)</li>
+            <li>3D geological data integration</li>
+        </ul>
+    </div>
+
+</section>
+
+</main>
+
+<footer>
+    © Ubuntu Geoscience. All rights reserved.
 </footer>
 
-<button id="backToTop" title="Go to top">↑</button>
-<script src="script.js"></script>
 </body>
 </html>
