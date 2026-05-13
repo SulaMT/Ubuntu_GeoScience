@@ -3,8 +3,8 @@
    ========================================================================== */
 :root {
     --accent-cyan: #00d4ff;
-    --accent-gold: #D4AF37;
-    --primary-dark: #2c3e50;
+    --accent-gold: #D4AF37;        /* Added missing gold color */
+    --primary-dark: #2c3e50;       /* Added missing dark color */
     --bg-dark: #0a192f;
     --bg-card: #112240;
     --text-main: #ccd6f6;
@@ -24,10 +24,6 @@ body {
     background-color: var(--bg-dark);
     scroll-padding-top: var(--navbar-height);
     overflow-x: hidden;
-
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
 }
 
 /* ==========================================================================
@@ -58,12 +54,11 @@ body {
     display: none;
 }
 
-/* Navbar Logo */
-.logo img,
 .logo_portrait {
-    max-height: 58px;
+    max-height: 50px;
     width: auto;
     display: block;
+    filter: brightness(0) invert(1);  /* REMOVE or comment out */
 }
 
 .nav-menu {
@@ -88,7 +83,7 @@ body {
    3. HERO SECTION
    ========================================================================== */
 .header-wrapper {
-    padding-top: calc(var(--navbar-height) + 60px);
+    padding-top: calc(var(--navbar-height) + 25px);
     padding-bottom: 60px;
     text-align: center;
 }
@@ -100,31 +95,23 @@ body {
     margin-bottom: 30px;
 }
 
-.text-section {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
 .text-section h1 {
-   font-size: clamp(2.2rem, 4vw, 3.5rem);
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
     line-height: 1.1;
     color: white;
     margin-bottom: 20px;
 }
-
 .partner-slogan {
-    font-size: 1.15rem;
-    line-height: 1.7;
+    font-size: 1.4rem;
     color: var(--accent-cyan);
-    font-weight: 500;
-    max-width: 750px;
-    margin: 0 auto;
+    font-weight: 600;
+    font-style: italic;
 }
 
 /* ==========================================================================
    4. GENERAL SECTIONS – FIX NAVBAR OVERLAP
    ========================================================================== */
+/* All sections that are direct children of body or main wrappers */
 .section,
 .experience-teaser,
 .container:first-of-type {
@@ -132,10 +119,12 @@ body {
     padding-bottom: 60px;
 }
 
+/* Hero section already has its own padding, so reset */
 #home.section {
     padding-top: 0;
 }
 
+/* About section specific (keeps white boxes) */
 #about {
     background-color: #0d1b2a;
     color: white;
@@ -181,8 +170,6 @@ body {
     max-width: 1100px;
     margin: 0 auto;
     padding: 40px 20px;
-
-    flex: 1;
 }
 
 .services-grid {
@@ -221,8 +208,6 @@ body {
 .experience-teaser {
     background-color: #112240;
     text-align: center;
-
-    flex: 1;
 }
 
 .cta-button {
@@ -242,15 +227,14 @@ body {
 }
 
 footer {
-    margin-top: auto;
-    padding: 20px;
+    padding: 40px 20px;
     text-align: center;
     color: #8892b0;
-    font-size: 0.75rem;
+    font-size: 0.85rem;
 }
 
 /* ==========================================================================
-   7. CONTACT PAGE
+   7. CONTACT PAGE (centered, dark background)
    ========================================================================== */
 #contact {
     background-color: var(--bg-dark);
@@ -268,17 +252,15 @@ footer {
     padding: 40px 20px;
 }
 
-.contact-logo {
+..contact-logo {
     margin-bottom: 40px;
 }
 
-/* Contact Page Logo */
 .logo_portrait_contact {
-    max-width: 220px;
-    width: 100%;
+    max-width: 180px;     /* or 220px */
     height: auto;
-    display: block;
-    margin: 0 auto 35px;
+    /* Remove or comment out this line */
+    /* filter: brightness(0) invert(1); */
 }
 
 .contact-details-center {
@@ -348,38 +330,19 @@ footer {
    9. RESPONSIVE DESIGN
    ========================================================================== */
 @media (max-width: 768px) {
-
-    .hamburger {
-        display: flex;
-    }
-
     .nav-menu {
         display: none;
-        position: absolute;
-        top: var(--navbar-height);
-        left: 0;
-        width: 100%;
-        flex-direction: column;
         background: var(--bg-card);
-        padding: 20px;
-        gap: 15px;
-        transform: translateX(-100%);
-        transition: transform 0.3s ease;
     }
 
     .nav-toggle:checked ~ .nav-menu {
-        transform: translateX(0);
         display: flex;
     }
 
     .text-section h1 {
-        font-size: 2.3rem;
-        line-height: 1.15;
-    }
-
-    .partner-slogan {
-        font-size: 1rem;
-    }
+    font-size: 2.1rem;
+    line-height: 1.15;
+}
 
     .section,
     .experience-teaser,
@@ -391,23 +354,12 @@ footer {
         flex: 1 1 100%;
     }
 
+    /* Add this line – no new @media, just the rule */
     .logo_layout {
         max-width: 90%;
     }
-
-    .logo img,
-    .logo_portrait {
-        max-height: 50px;
-    }
-
-    .logo_portrait_contact {
-        max-width: 200px;
-    }
 }
-
-/* ==========================================================================
-   10. HAMBURGER MENU ICON
-   ========================================================================== */
+/* Hamburger menu icon */
 .hamburger {
     display: none;
     cursor: pointer;
@@ -420,4 +372,84 @@ footer {
     height: 3px;
     background-color: var(--accent-cyan);
     transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: absolute;
+        top: var(--navbar-height);
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background: var(--bg-card);
+        padding: 20px;
+        gap: 15px;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+    
+    .nav-toggle:checked ~ .nav-menu {
+        transform: translateX(0);
+        display: flex;
+    }
+    
+    .nav-toggle {
+        display: none;
+    }
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;  /* full viewport height */
+}
+
+main, .section, .container, .experience-teaser {
+    flex: 1;  /* pushes footer down */
+}
+
+footer {
+    margin-top: auto;   /* forces footer to bottom */
+    padding: 20px;      /* slightly reduced */
+    text-align: center;
+    color: #8892b0;
+    font-size: 0.75rem; /* smaller than before */
+}
+
+/* ====================== LOGO SIZES ====================== */
+
+/* Navbar Logo - Bigger */
+.logo img,
+.logo_portrait {
+    max-height: 58px;
+    width: auto;
+    display: block;
+}
+
+/* Contact Page Logo - Smaller */
+.logo_portrait_contact {
+    
+   /* Replace or update the existing .logo_portrait_contact rule */
+.logo_portrait_contact {
+    max-width: 220px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 35px;
+}
+
+/* Mobile adjustment */
+@media (max-width: 768px) {
+    .logo img,
+    .logo_portrait {
+        max-height: 50px;
+    }
+    
+    .logo_portrait_contact {
+        max-width: 200px;
+    }
 }
