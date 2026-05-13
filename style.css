@@ -198,6 +198,94 @@ a {
     color: var(--text-muted);
     font-style: italic;
 }
+/* =========================================================
+   CONTACT HERO
+========================================================= */
+
+.contact-hero {
+
+    position: relative;
+
+    min-height: 58vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 180px 20px 120px;
+
+    background:
+        linear-gradient(
+            rgba(5,15,30,0.82),
+            rgba(5,15,30,0.92)
+        ),
+        url('images/geology-hero.jpg');
+
+    background-size: cover;
+    background-position: center;
+
+    overflow: hidden;
+}
+
+.hero-overlay {
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(0,212,255,0.12),
+            transparent 35%
+        );
+}
+
+.hero-content {
+
+    position: relative;
+    z-index: 2;
+
+    max-width: 900px;
+}
+
+.hero-tag {
+
+    color: var(--accent-cyan);
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 18px;
+
+    text-transform: uppercase;
+
+    font-size: 0.85rem;
+}
+
+.contact-hero h1 {
+
+    font-size: clamp(2.6rem, 5vw, 4.6rem);
+
+    line-height: 1.15;
+
+    margin-bottom: 24px;
+}
+
+.hero-subtext {
+
+    max-width: 760px;
+
+    margin: 0 auto;
+
+    color: var(--text-muted);
+
+    font-size: 1.15rem;
+
+    line-height: 1.8;
+}
 
 /* =========================================================
    8. TEXT HOLDERS (Push Forward Interaction)
