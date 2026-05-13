@@ -488,3 +488,73 @@ footer {
         max-width: 200px;
     }
 }
+
+
+@media (max-width: 768px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .section {
+        padding: 30px 20px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .hero-content h1,
+    .text-section h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+        text-align: center;
+    }
+
+    .hero-subtext,
+    .partner-slogan,
+    .text-section p {
+        font-size: 1rem;
+        line-height: 1.6;
+        text-align: center;
+    }
+
+    .text-holder {
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .text-holder p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .logo_portrait {
+        max-height: 42px;
+    }
+
+    .nav-container {
+        padding: 0 15px;
+    }
+
+    .direct-contact-box {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .direct-contact-links a {
+        font-size: 1rem;
+        word-break: break-word;
+    }
+}
