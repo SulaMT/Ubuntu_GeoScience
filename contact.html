@@ -13,14 +13,14 @@
 </head>
 <body>
 
-  <nav class="navbar">
+<nav class="navbar">
     <div class="nav-container">
         <a href="index.html" class="nav-logo-link">
             <img src="images/logo-lanscape-contact.png" class="logo_portrait" alt="Ubuntu Geoscience">
-        </a> <!-- Properly closed the anchor tag -->
+        </a>
 
-        <input type="checkbox" id="nav-check" class="nav-toggle" style="display:none;">
-        <label for="nav-check" class="hamburger">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" style="display:none;">
+        <label for="nav-toggle" class="hamburger">
             <span></span>
             <span></span>
             <span></span>
@@ -35,96 +35,63 @@
     </div>
 </nav>
 
-    <main class="contact-page">
+<main class="contact-page" style="flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 120px 20px 60px;">
         
-        <section class="contact-hero">
-
-    <div class="hero-overlay"></div>
-
-    <div class="hero-content">
-
-        <p class="hero-tag">
+    <section class="contact-hero" style="text-align: center; margin-bottom: 40px; max-width: 800px;">
+        <p class="hero-subtitle" style="text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem; margin-bottom: 10px;">
             Technical Mineral Exploration Support
         </p>
-
-        <h1>
-     GEOSPATIAL & EXPLORATION ANALYTICS
+        <h1 style="font-size: 2.5rem; color: #white; margin-bottom: 15px;">
+            GEOSPATIAL & EXPLORATION ANALYTICS
         </h1>
-
-        <p class="hero-subtext">
-         Data-driven geological interpretation, target generation, drilling support, and geospatial workflows for mineral exploration.
+        <p style="color: #8892b0; font-size: 1.1rem; max-width: 650px; margin: 0 auto; line-height: 1.6;">
+            Data-driven geological interpretation, target generation, drilling support, and geospatial workflows for mineral exploration.
         </p>
+    </section>
 
-    
+    <section class="section" style="width: 100%; max-width: 600px; padding: 0;">
+        <div class="card" style="text-align: center; padding: 40px 30px;">
+            <h2 style="color: white; margin-bottom: 10px; font-size: 1.8rem;">Direct Contact</h2>
+            <p style="color: var(--accent-cyan); font-weight: 600; margin-bottom: 35px; letter-spacing: 0.5px;">TECHNICAL ENQUIRIES ONLY</p>
 
-    </div>
-
-</section>
-
-            <section class="section">
-                <h2>Exploration Lifecycle Support</h2>
-
-                <div class="text-holder">
-                    <h3>1. Reconnaissance Stage</h3>
-                    <p>Regional-scale geological assessment, terrain evaluation, and early-stage prospectivity screening.</p>
+            <div class="contact-details-center" style="display: flex; flex-direction: column; gap: 20px;">
+                
+                <div class="contact-item">
+                    <a href="mailto:info@ubuntugeoscience.com" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; font-size: 1.1rem;">
+                        <span>✉</span> info@ubuntugeoscience.com
+                    </a>
                 </div>
-
-                <div class="text-holder">
-                    <h3>2. Target Generation Stage</h3>
-                    <p>Integration of field mapping, geochemistry, geophysics, and structural interpretation to define drill targets.</p>
+                
+                <div class="contact-item">
+                    <a href="https://wa.me/966535567001" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; font-size: 1.1rem;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 18px; height: 18px;">
+                        <span>+966 535 567 001 (SA)</span>
+                    </a>
                 </div>
-
-                <div class="text-holder">
-                   <h3>3. Drilling Stage</h3>
-<p>Geological supervision, core logging, oriented core measurements, structural interpretation, and QAQC support during drilling campaigns.</p>
+                
+                <div class="contact-item">
+                    <a href="tel:+249912110469" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; font-size: 1.1rem;">
+                        <span>📞</span> +249 912 110 469 (SD)
+                    </a>
                 </div>
+                
+            </div>
+        </div>
+    </section>
 
-                <div class="text-holder">
-                    <h3>4. Resource Definition Stage</h3>
-                    <p>Geological modelling input, structural controls analysis, and support for resource estimation workflows.</p>
-                </div>
-            </section>
+    <section class="section" style="max-width: 700px; text-align: center; margin-top: 40px; padding: 0;">
+        <p style="color: #8892b0; font-size: 1rem; line-height: 1.7; font-style: italic;">
+            We prioritize technically grounded exploration projects where geological understanding drives decision-making from fieldwork through to discovery.
+        </p>
+    </section>
 
-            <section class="section">
-                <div class="direct-contact-box">
-                    <h2>Direct Contact</h2>
-                    <p style="margin-bottom: 20px;"><strong>Technical Enquiries Only</strong></p>
+</main>
 
-                    <div class="direct-contact-links">
-                        <a href="mailto:info@ubuntugeoscience.com" style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 15px;">
-                           <span>✉</span> info@ubuntugeoscience.com
-                        </a>
-                        
-                        <a href="https://wa.me/966535567001" target="_blank" style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 15px;">
-                           <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 18px; height: 18px;">
-                           <span>+966 535 567 001 (SA)</span>
-                        </a>
-                        
-                        <a href="tel:+249912110469" style="display: flex; align-items: center; justify-content: center; gap: 10px;">
-                           <span>📞</span> +249 912 110 469 (SD)
-                        </a>
-                    </div>
-                </div>
-            </section>
+<footer>
+    <p>© Ubuntu Geoscience. All rights reserved.</p>
+</footer>
 
-            <section class="section">
-                <div class="text-holder">
-                    <p>
-                        We prioritize technically grounded exploration projects where 
-                        geological understanding drives decision-making from fieldwork 
-                                            through to discovery.
-                    </p>
-                </div>
-            </section>
-
-
-    </main>
-
-    <footer>
-        <p>Ubuntu Geoscience. All rights reserved.</p>
-    </footer>
-
-    <button id="backToTop" title="Go to top">↑</button>
+<button id="backToTop" title="Go to top">↑</button>
 
 </body>
 </html>
