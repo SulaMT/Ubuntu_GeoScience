@@ -610,36 +610,39 @@ footer {
     direction: rtl;
 }
 /* ==========================================================================
-   Ubuntu Geoscience - Layout Container & Typography Fixes
+   Ubuntu Geoscience - Layout Container & Typography Fixes (Updated)
    ========================================================================== */
 
 /* Global container to constrain width and center content across the site */
 .container {
-    max-width: 1100px; /* Prevents text from stretching too wide on large monitors */
-    margin: 0 auto;    /* Centers the entire container horizontally */
-    padding: 0 20px;   /* Safety padding so text doesn't hug mobile screen edges */
+    max-width: 1100px !important; 
+    margin: 0 auto !important;    
+    padding: 0 20px !important;   
     box-sizing: border-box;
 }
 
 /* Force the section title to be perfectly centered */
 .technical-consultancy h2 {
     text-align: center !important;
-    margin-top: 40px;
-    margin-bottom: 25px;
-    font-size: 2rem;
-    width: 100%;
+    margin-top: 40px !important;
+    margin-bottom: 30px !important;
+    font-size: 2rem !important;
+    width: 100% !important;
+    display: block !important;
 }
 
 /* Center the paragraph block itself, but keep text readable */
 .technical-consultancy .text-holder {
-    max-width: 850px;   /* Sets an elite reading line-length */
-    margin: 0 auto;     /* Centers this block under your centered title */
-    text-align: left;   /* Keeps paragraph text left-aligned for professional reading */
-    line-height: 1.65;
+    max-width: 850px !important;   
+    margin: 0 auto !important;     
+    text-align: left !important;   /* Ensures paragraphs read cleanly left-to-right */
+    display: block !important;
 }
 
-/* Give the paragraphs clean breathing room */
-.technical-consultancy p {
-    margin-bottom: 20px;
-    font-size: 1.05rem;
+/* Force alignment and spacing directly onto the paragraphs */
+.technical-consultancy .text-holder p {
+    text-align: left !important;
+    margin-bottom: 24px !important; /* Forces breathing room between paragraphs */
+    font-size: 1.05rem !important;
+    line-height: 1.7 !important;   /* Relaxes the text so it's easier to scan */
 }
