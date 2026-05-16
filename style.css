@@ -609,3 +609,37 @@ footer {
     margin: 15px auto 25px auto;
     direction: rtl;
 }
+/* ==========================================================================
+   Ubuntu Geoscience - Layout Container & Typography Fixes
+   ========================================================================== */
+
+/* Global container to constrain width and center content across the site */
+.container {
+    max-width: 1100px; /* Prevents text from stretching too wide on large monitors */
+    margin: 0 auto;    /* Centers the entire container horizontally */
+    padding: 0 20px;   /* Safety padding so text doesn't hug mobile screen edges */
+    box-sizing: border-box;
+}
+
+/* Force the section title to be perfectly centered */
+.technical-consultancy h2 {
+    text-align: center !important;
+    margin-top: 40px;
+    margin-bottom: 25px;
+    font-size: 2rem;
+    width: 100%;
+}
+
+/* Center the paragraph block itself, but keep text readable */
+.technical-consultancy .text-holder {
+    max-width: 850px;   /* Sets an elite reading line-length */
+    margin: 0 auto;     /* Centers this block under your centered title */
+    text-align: left;   /* Keeps paragraph text left-aligned for professional reading */
+    line-height: 1.65;
+}
+
+/* Give the paragraphs clean breathing room */
+.technical-consultancy p {
+    margin-bottom: 20px;
+    font-size: 1.05rem;
+}
