@@ -56,7 +56,7 @@ body > main:first-of-type {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 30px;
     height: var(--navbar-height);
 }
 
@@ -67,9 +67,10 @@ body > main:first-of-type {
 /* Navbar Logo */
 .logo img,
 .logo_portrait {
-    max-height: 58px;
+    max-height: 48px;
     width: auto;
     display: block;
+    padding: 4px 0;
 }
 
 .nav-menu {
@@ -80,7 +81,8 @@ body > main:first-of-type {
 
 .nav-menu a {
     text-decoration: none;
-    color: #8892b0;
+    color: #a8b2d1;
+    font size: 1.05rem;
     font-weight: 500;
     transition: color 0.3s ease;
 }
@@ -128,10 +130,11 @@ body > main:first-of-type {
 }
 
 .hero-subtitle {
-    font-size: 1.1rem;
-    color: var(--accent-cyan);
-    max-width: 750px;
+    font-size: 1.15rem;
+    color: #8892b0
+    max-width: 680px;
     margin: 0 auto;
+    line-height: 1.7;
 }
 
 .header-wrapper {
