@@ -388,11 +388,11 @@ footer {
         flex: 1 1 100%;
     }
 
-    /* Add this line – no new @media, just the rule */
     .logo_layout {
         max-width: 90%;
     }
 }
+
 /* Hamburger menu icon */
 .hamburger {
     display: none;
@@ -406,6 +406,33 @@ footer {
     height: 3px;
     background-color: var(--accent-cyan);
     transition: all 0.3s ease;
+}
+
+/* ====================== LOGO SIZES ====================== */
+
+.logo img,
+.logo_portrait {
+    max-height: 58px;
+    width: auto;
+    display: block;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main, .section, .container, .experience-teaser {
+    flex: 1;
+}
+
+footer {
+    margin-top: auto;
+    padding: 20px;
+    text-align: center;
+    color: #8892b0;
+    font-size: 0.75rem;
 }
 
 @media (max-width: 768px) {
@@ -431,54 +458,15 @@ footer {
         transform: translateX(0);
         display: flex;
     }
-    
+
     .nav-toggle {
         display: none;
     }
-}
 
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;  /* full viewport height */
-}
+    body {
+        overflow-x: hidden;
+    }
 
-main, .section, .container, .experience-teaser {
-    flex: 1;  /* pushes footer down */
-}
-
-footer {
-    margin-top: auto;   /* forces footer to bottom */
-    padding: 20px;      /* slightly reduced */
-    text-align: center;
-    color: #8892b0;
-    font-size: 0.75rem; /* smaller than before */
-}
-
-/* ====================== LOGO SIZES ====================== */
-
-/* Navbar Logo - Bigger */
-.logo img,
-.logo_portrait {
-    max-height: 58px;
-    width: auto;
-    display: block;
-}
-
-/* Contact Page Logo - Smaller */
-.logo_portrait_contact {
-    
-   /* Replace or update the existing .logo_portrait_contact rule */
-.logo_portrait_contact {
-    max-width: 220px;        /* desired max size */
-    width: 100%;             /* allows scaling down */
-    height: auto;
-    display: block;
-    margin: 0 auto 35px;
-}
-
-/* Mobile adjustment */
-@media (max-width: 768px) {
     .logo img,
     .logo_portrait {
         max-height: 50px;
@@ -487,13 +475,9 @@ footer {
     .logo_portrait_contact {
         max-width: 200px;
     }
-}
 
-
-@media (max-width: 768px) {
-
-    body {
-        overflow-x: hidden;
+    .logo_portrait {
+        max-height: 42px;
     }
 
     .section {
@@ -538,10 +522,6 @@ footer {
     img {
         max-width: 100%;
         height: auto;
-    }
-
-    .logo_portrait {
-        max-height: 42px;
     }
 
     .nav-container {
